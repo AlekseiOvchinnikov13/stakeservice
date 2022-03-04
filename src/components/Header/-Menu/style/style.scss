@@ -1,0 +1,24 @@
+@import "/src/assets/style/vars";
+
+.menu {
+  .menu-list {
+    list-style-type: none;
+    display: flex;
+
+    .menu-item {
+      margin: 0 30px;
+
+      &__link {
+        color: inherit;
+
+        &:hover, &:focus {
+          color: $HIGH_FIDELITY_BLUE_COLOR;
+        }
+      }
+
+      &__link-active {
+        color: $HIGH_FIDELITY_BLUE_COLOR;
+      }
+    }
+  }
+}

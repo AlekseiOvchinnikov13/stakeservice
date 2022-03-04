@@ -1,0 +1,16 @@
+@import '/src/assets/style/vars';
+
+.button {
+  background: $HIGH_FIDELITY_ORANGE_COLOR;
+  border-radius: 10px;
+  border: 1px transparent solid;
+  padding: 12px 40px;
+  color: inherit;
+
+  transition: all ease-in-out .3s;
+
+  &:hover, &:focus {
+    background: transparent;
+    border: 1px $HIGH_FIDELITY_ORANGE_COLOR solid;
+  }
+}

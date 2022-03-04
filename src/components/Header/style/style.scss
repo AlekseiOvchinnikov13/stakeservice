@@ -1,0 +1,12 @@
+@import '/src/assets/style/vars';
+
+.header {
+  background: $HEADER_BACKGROUND_COLOR;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 90px;
+  position: relative;
+  z-index: 5;
+}

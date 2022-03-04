@@ -1,0 +1,32 @@
+@import '../../../../assets/style/vars';
+
+.top-content {
+  padding-top: 220px;
+  position: relative;
+
+  &__sub-title {
+    color: $FONT_DARK_GRAY_COLOR;
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  &__title {
+    color: $HIGH_FIDELITY_BLUE_COLOR;
+    font-weight: 800;
+    font-size: 120px;
+    line-height: 98px;
+    letter-spacing: 0.05em;
+  }
+
+  &__sub-title, &__title {
+    z-index: 1;
+    position: relative;
+  }
+
+  &__top-background {
+    position: absolute;
+    right: 0;
+    top: -90px;
+    z-index: 0;
+  }
+}

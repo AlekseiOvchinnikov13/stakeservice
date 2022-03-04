@@ -1,0 +1,1 @@
+export const CALCULATOR_TITLE = 'Calculator';
