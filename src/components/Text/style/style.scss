@@ -1,0 +1,11 @@
+@import './src/assets/style/vars';
+
+.paragraph-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 160%;
+  color: $FONT_WHITE_COLOR;
+  margin-top: 32px;
+  position: relative;
+  z-index: 5;
+}

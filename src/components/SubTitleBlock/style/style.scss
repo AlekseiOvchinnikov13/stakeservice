@@ -1,0 +1,44 @@
+@import './src/assets/style/vars';
+
+.subtitle-block {
+  width: 70%;
+
+  span {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: $HIGH_FIDELITY_BLUE_COLOR;
+    margin-bottom: 10px;
+  }
+
+  h6 {
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 98px;
+    color: $FONT_WHITE_COLOR;
+    text-transform: uppercase;
+  }
+}
+
+.blue-stick {
+  position: relative;
+  padding-left: 24px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 122px;
+    width: 2px;
+    background-color: $HIGH_FIDELITY_BLUE_COLOR;
+  }
+}
+
+.subtitle-block-right {
+  text-align: right;
+  padding-top: 150px;
+
+  margin-left: auto;
+  margin-right: 0;
+}

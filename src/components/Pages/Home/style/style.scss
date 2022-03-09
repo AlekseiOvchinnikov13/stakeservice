@@ -30,3 +30,41 @@
     z-index: 0;
   }
 }
+
+#project {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+#about-us {
+  .about-us-block, .what-we-do {
+    position: relative;
+
+    .subtitle-block {
+      padding-bottom: 150px;
+    }
+  }
+
+  .reliable-validator {
+    width: 100%;
+    padding-bottom: 200px;
+    position: relative;
+
+    &__background {
+      position: absolute;
+      left: -90px;
+    }
+  }
+
+  .what-we-do {
+    .subtitle-block {
+      margin-top: 64px;
+    }
+  }
+
+}

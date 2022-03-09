@@ -1,0 +1,49 @@
+@import './src/assets/style/vars';
+
+.text-stroke {
+  font-weight: bold;
+  font-size: 200px;
+  line-height: 1;
+  -webkit-text-stroke-width: 1px;
+
+  -webkit-text-stroke-color: $HIGH_FIDELITY_BLUE_COLOR;
+  -webkit-text-fill-color: transparent;
+  color: $HIGH_FIDELITY_BLUE_COLOR;
+
+  text-transform: lowercase;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.right-center, .right-up {
+  position: absolute;
+  right: -90px;
+}
+
+.right-center {
+  top: -55px;
+}
+
+.right-up {
+  top: -150px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(150vw);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-150vw);
+  }
+}
+
+.center {
+  animation: marquee 8s linear infinite;
+  white-space: nowrap;
+}
+
