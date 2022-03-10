@@ -1,7 +1,7 @@
 @import '../../../../assets/style/vars';
 
 .top-content {
-  padding-top: 220px;
+  //padding-top: 220px;
   position: relative;
 
   &__sub-title {
@@ -37,8 +37,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
 }
 
 #about-us {
@@ -58,6 +56,7 @@
     &__background {
       position: absolute;
       left: -90px;
+      top: -135px;
     }
   }
 
@@ -66,5 +65,33 @@
       margin-top: 64px;
     }
   }
-
 }
+
+#blog {
+  padding-bottom: 200px;
+
+  .blog-header {
+    position: relative;
+    padding-bottom: 64px;
+
+    .subtitle-block {
+      .see-all {
+        margin-top: 64px;
+      }
+    }
+  }
+
+  .blog-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.section-padding {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+

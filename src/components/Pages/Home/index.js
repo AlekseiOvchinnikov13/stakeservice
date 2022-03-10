@@ -2,6 +2,9 @@ import {
   ABOUT_US,
   ABOUT_US_SUBTITLE,
   ABOUT_US_TEXT,
+  BLOG,
+  BLOG_CARDS_ARRAY,
+  BLOG_SUBTITLE,
   OUR_BEGINNING_SUBTITLE,
   OUR_BEGINNING_TEXT,
   PRODUCT_CARDS_ARRAY,
@@ -17,14 +20,21 @@ import ProjectViewCard from './-projectViewCard/ProjectViewCard';
 import SubTitleBlock from '../../SubTitleBlock';
 import TextStroke from '../../TextStroke';
 import WhatWeDoBg from './images/what-we-do-bg.svg';
+import Fade from 'react-reveal/Fade';
+import SeeAll from '../../SeeAll';
+import BlogCard from '../../BlogCard';
 
 const Home = () => {
 
   return (
     <>
-      <section className="top-content home-section section container">
-        <p className="top-content__sub-title">{SUB_TITLE}</p>
-        <h1 className="top-content__title">{TITLE}</h1>
+      <section className="top-content home-section container section-padding">
+        <Fade right duration={2000}>
+          <p className="top-content__sub-title">{SUB_TITLE}</p>
+        </Fade>
+        <Fade left duration={2000}>
+          <h1 className="top-content__title">{TITLE}</h1>
+        </Fade>
         <img src={TopBg} alt="top background" className="top-content__top-background"/>
       </section>
       <section id="project" className="container">
@@ -32,7 +42,7 @@ const Home = () => {
           <ProjectViewCard key={card.label} card={card}/>
         )}
       </section>
-      <section id="about-us" className="container">
+      <section id="about-us" className="container section-padding">
         <div className="about-us-block">
           <SubTitleBlock
             label={ABOUT_US}
@@ -65,7 +75,21 @@ const Home = () => {
         </div>
 
       </section>
-      {/*<section id="blog"></section>*/}
+      <section id="blog" className="container">
+        <div className="blog-header">
+          <SubTitleBlock
+            label={BLOG}
+            Component={SeeAll}
+            className="blue-stick"
+          />
+          <TextStroke text={BLOG_SUBTITLE} className="right-center"/>
+        </div>
+        <div className="blog-cards">
+          {BLOG_CARDS_ARRAY.map(card =>
+            <BlogCard data={card} key={card.title}/>
+          )}
+        </div>
+      </section>
       {/*<section id="contact"></section>*/}
     </>
   );

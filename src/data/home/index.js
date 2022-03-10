@@ -1,13 +1,18 @@
-import SolanaIcon from '../images/project-icon-solana.png';
-import CeloIcon from '../images/project-icon-celo.png';
-import GraphIcon from '../images/project-icon-graph.png';
-import OasisIcon from '../images/project-icon-oasis.png';
-import AgoricIcon from '../images/project-icon-agoric.png';
-import RegenIcon from '../images/project-icon-regen.png';
-import SentinelIcon from '../images/project-icon-sentinel.png';
-import DockioIcon from '../images/project-icon-dockio.png';
-import CosmicHorizonIcon from '../images/project-icon-cosmic-horizon.png';
-import CentrifugeIcon from '../images/project-icon-centrifuge.webp';
+import SolanaIcon from '../images/project cards/project-icon-solana.png';
+import CeloIcon from '../images/project cards/project-icon-celo.png';
+import GraphIcon from '../images/project cards/project-icon-graph.png';
+import OasisIcon from '../images/project cards/project-icon-oasis.png';
+import AgoricIcon from '../images/project cards/project-icon-agoric.png';
+import RegenIcon from '../images/project cards/project-icon-regen.png';
+import SentinelIcon from '../images/project cards/project-icon-sentinel.png';
+import DockioIcon from '../images/project cards/project-icon-dockio.png';
+import CosmicHorizonIcon from '../images/project cards/project-icon-cosmic-horizon.png';
+import CentrifugeIcon from '../images/project cards/project-icon-centrifuge.webp';
+
+import BlogImage1 from '../images/blog cards/blog-img-1.jpg';
+import BlogImage2 from '../images/blog cards/blog-img-2.jpg';
+import BlogImage3 from '../images/blog cards/blog-img-3.jpg';
+import BlogImage4 from '../images/blog cards/blog-img-4.jpg';
 
 export const TITLE = 'VALIDATOR';
 export const SUB_TITLE = 'Trusted & Secure';
@@ -22,6 +27,9 @@ export const OUR_BEGINNING_TEXT = 'Stake Service like many cryptocurrency projec
 
 export const WHAT_WE_DO = 'what we do';
 export const WHAT_WE_DO_TEXT = 'You can join the network by&nbsp;delegating your coins to&nbsp;our professional validators, not only supporting projects, but also earning from 5&nbsp;to&nbsp;50&nbsp;percent per annum! The percentage of&nbsp;the validator&rsquo;s commission is&nbsp;always minimal, which allows&nbsp;us to&nbsp;attract new stakeholders to&nbsp;support projects.';
+
+export const BLOG = 'blog';
+export const BLOG_SUBTITLE = 'read more';
 
 export const PRODUCT_CARDS_ARRAY = [
   {
@@ -123,5 +131,36 @@ export const PRODUCT_CARDS_ARRAY = [
     exploreText: 'Explore',
     isWithArrow: true,
     link: '#'
+  }
+];
+
+export const BLOG_CARDS_ARRAY = [
+  {
+    img: BlogImage1,
+    date: '11.02.2022',
+    tag: 'Staking',
+    title: 'HOW TO STAKE CELO / STAKE SERVICE VALIDATOR',
+    description: 'Cryptocurrencies are basically digital assets. It&nbsp;is&nbsp;secured by&nbsp;cryptography ...'
+  },
+  {
+    img: BlogImage2,
+    date: '14.02.2022',
+    tag: 'About',
+    title: 'Money can be beautiful',
+    description: 'Today we&nbsp;would like to&nbsp;review one of&nbsp;the most important projects in&nbsp;our ...'
+  },
+  {
+    img: BlogImage3,
+    date: '16.02.2022',
+    tag: 'Staking',
+    title: 'Staking Regen with Keplr',
+    description: 'Hello everyone! April&nbsp;15, 2021&nbsp;&mdash; the launch of&nbsp;the Regen Network mainnet ...'
+  },
+  {
+    img: BlogImage4,
+    date: '18.02.2022',
+    tag: 'About',
+    title: 'Regen Network — blockchain network',
+    description: 'We are witnessing the explosive growth of the blockchain system nowadays ...'
   }
 ];

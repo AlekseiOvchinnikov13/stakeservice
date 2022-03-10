@@ -1,11 +1,13 @@
 import './style/style.scss';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-const Text = ({text}) => {
+const Text = ({text, isDescription}) => {
+  const classes = classNames('paragraph-text', {'description-text': isDescription});
 
   return (
     <p
-      className="paragraph-text"
+      className={classes}
       dangerouslySetInnerHTML={{
         __html: text
       }}
@@ -14,7 +16,8 @@ const Text = ({text}) => {
 };
 
 Text.propTypes = {
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
+  isDescription: PropTypes.bool
 };
 
 export default Text;

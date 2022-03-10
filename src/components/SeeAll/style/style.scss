@@ -1,0 +1,43 @@
+@import "src/assets/style/vars";
+
+.see-all-button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.see-all {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: $HIGH_FIDELITY_BLUE_COLOR;
+  position: relative;
+  text-transform: capitalize;
+  padding-right: 20px;
+  transition: padding-right .4s;
+
+  &:hover, &:focus {
+    padding-right: 30px;
+  }
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 7px;
+    background-color: $HIGH_FIDELITY_BLUE_COLOR;
+  }
+
+  &:before {
+    top: 5px;
+    right: 0;
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    bottom: 5px;
+    right: 0;
+    transform: rotate(-45deg);
+  }
+}
+

@@ -9,3 +9,10 @@
   position: relative;
   z-index: 5;
 }
+
+.description-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: $FONT_DARK_GRAY_COLOR;
+}

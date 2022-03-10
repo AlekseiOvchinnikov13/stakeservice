@@ -1,16 +1,17 @@
 import './style/style.scss';
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
 import Text from '../Text';
+import PropTypes from 'prop-types';
 
-const SubTitleBlock = ({label, title, text, className}) => {
+const SubTitleBlock = ({label, title, text, Component, className}) => {
   const classes = classNames('subtitle-block', className);
 
   return (
     <div className={classes}>
       {label && <span>{label}</span>}
       <h6>{title}</h6>
-      <Text text={text}/>
+      {text && <Text text={text}/>}
+      {Component && <Component/>}
     </div>
   );
 };
@@ -19,7 +20,8 @@ SubTitleBlock.propTypes = {
   className: PropTypes.string,
   label: PropTypes.string,
   title: PropTypes.string,
-  text: PropTypes.string.isRequired
+  text: PropTypes.string,
+  Component: PropTypes.func
 };
 
 export default SubTitleBlock;
