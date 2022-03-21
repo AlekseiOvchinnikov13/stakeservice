@@ -3,7 +3,6 @@ import {
   ABOUT_US_SUBTITLE,
   ABOUT_US_TEXT,
   BLOG,
-  BLOG_CARDS_ARRAY,
   BLOG_SUBTITLE,
   OUR_BEGINNING_SUBTITLE,
   OUR_BEGINNING_TEXT,
@@ -21,10 +20,19 @@ import SubTitleBlock from '../../SubTitleBlock';
 import TextStroke from '../../TextStroke';
 import WhatWeDoBg from './images/what-we-do-bg.svg';
 import Fade from 'react-reveal/Fade';
-import SeeAll from '../../SeeAll';
+import {useEffect, useState} from 'react';
+import {getPublication} from '../../../api/api';
+import {CALCULATOR_STROKE_TEXT, CALCULATOR_TITLE} from '../../../data/calculator';
 import BlogCard from '../../BlogCard';
+import LinkArrow from '../../LinkArrow';
 
 const Home = () => {
+  const [publications, setPublications] = useState(null);
+  //const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    getPublication().then(res => setPublications(res));
+  }, []);
 
   return (
     <>
@@ -73,22 +81,28 @@ const Home = () => {
           />
           <TextStroke text={WHAT_WE_DO} className="right-up"/>
         </div>
-
       </section>
       <section id="blog" className="container">
         <div className="blog-header">
           <SubTitleBlock
             label={BLOG}
-            Component={SeeAll}
+            Component={LinkArrow}
             className="blue-stick"
           />
           <TextStroke text={BLOG_SUBTITLE} className="right-center"/>
         </div>
         <div className="blog-cards">
-          {BLOG_CARDS_ARRAY.map(card =>
+          {publications && publications.slice(6).map(card =>
             <BlogCard data={card} key={card.title}/>
           )}
         </div>
+      </section>
+      <section id="calculator" className="container">
+        <SubTitleBlock
+          label={CALCULATOR_TITLE}
+          className="blue-stick"
+        />
+        <TextStroke text={CALCULATOR_STROKE_TEXT} className="center"/>
       </section>
       {/*<section id="contact"></section>*/}
     </>

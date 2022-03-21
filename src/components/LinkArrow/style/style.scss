@@ -1,18 +1,11 @@
 @import "src/assets/style/vars";
 
-.see-all-button {
-  border: none;
-  background-color: transparent;
-  padding: 0;
-}
-
-.see-all {
+.link-arrow {
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
   color: $HIGH_FIDELITY_BLUE_COLOR;
   position: relative;
-  text-transform: capitalize;
   padding-right: 20px;
   transition: padding-right .4s;
 

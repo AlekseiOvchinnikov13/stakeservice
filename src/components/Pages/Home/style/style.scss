@@ -75,7 +75,7 @@
     padding-bottom: 64px;
 
     .subtitle-block {
-      .see-all {
+      .link-arrow {
         margin-top: 64px;
       }
     }
@@ -88,6 +88,11 @@
     align-items: center;
     justify-content: space-between;
   }
+}
+
+#calculator {
+  position: relative;
+  padding-bottom: 100px;
 }
 
 .section-padding {
