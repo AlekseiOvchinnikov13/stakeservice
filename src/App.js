@@ -2,17 +2,27 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './components/Pages/Home';
 import Header from './components/Header';
+import {PostsContext} from './context/postsContext';
+import {useEffect, useState} from 'react';
+import {getFeeds} from './api/api';
 
 const App = () => {
-  return (
-    <BrowserRouter>
-      <ScrollToTop/>
-      <Header/>
-      <Switch>
+  const [posts, setPosts] = useState();
+  useEffect(async () => {
+    setPosts(await getFeeds());
+  }, []);
 
-        <Route path='/' component={Home}/>
-      </Switch>
-    </BrowserRouter>
+  return (
+    <PostsContext.Provider value={posts}>
+      <BrowserRouter>
+        <ScrollToTop/>
+        <Header/>
+        <Switch>
+
+          <Route path="/" component={Home}/>
+        </Switch>
+      </BrowserRouter>
+    </PostsContext.Provider>
   );
 };
 

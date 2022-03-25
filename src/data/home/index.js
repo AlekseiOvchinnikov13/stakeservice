@@ -35,7 +35,9 @@ export const PRODUCT_CARDS_ARRAY = [
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
     isWithArrow: true,
-    link: '#'
+    link: '#',
+    coin: 'SOL',
+    coinName: 'Solana'
   },
   {
     img: CeloIcon,
@@ -45,7 +47,9 @@ export const PRODUCT_CARDS_ARRAY = [
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
     isWithArrow: true,
-    link: '#'
+    link: '#',
+    coin: 'CELO',
+    coinName: 'Celo'
   },
   {
     img: GraphIcon,
@@ -55,7 +59,9 @@ export const PRODUCT_CARDS_ARRAY = [
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
     isWithArrow: true,
-    link: '#'
+    link: '#',
+    coin: 'GRT',
+    coinName: 'The Graph'
   },
   {
     img: OasisIcon,
@@ -65,7 +71,9 @@ export const PRODUCT_CARDS_ARRAY = [
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
     isWithArrow: true,
-    link: '#'
+    link: '#',
+    coin: 'ROSE',
+    coinName: 'Oasis Network'
   },
   {
     img: AgoricIcon,
@@ -75,7 +83,9 @@ export const PRODUCT_CARDS_ARRAY = [
     rewardText: 'Nominal Reward (soon)',
     exploreText: 'Explore',
     isWithArrow: true,
-    link: '#'
+    link: '#',
+    coin: 'BLD',
+    coinName: 'Agoric'
   },
   {
     img: RegenIcon,
@@ -85,7 +95,9 @@ export const PRODUCT_CARDS_ARRAY = [
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
     isWithArrow: true,
-    link: '#'
+    link: '#',
+    coin: 'REGEN',
+    coinName: 'Regen Network'
   },
   {
     img: SentinelIcon,
@@ -95,7 +107,9 @@ export const PRODUCT_CARDS_ARRAY = [
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
     isWithArrow: true,
-    link: '#'
+    link: '#',
+    coin: 'DVPN',
+    coinName: 'Sentinel'
   },
   {
     img: CentrifugeIcon,
@@ -105,7 +119,9 @@ export const PRODUCT_CARDS_ARRAY = [
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
     isWithArrow: true,
-    link: '#'
+    link: '#',
+    coin: 'CFG',
+    coinName: 'Centrifuge'
   },
   {
     img: CosmicHorizonIcon,
@@ -115,7 +131,9 @@ export const PRODUCT_CARDS_ARRAY = [
     rewardText: '',
     exploreText: 'Explore',
     isWithArrow: true,
-    link: '#'
+    link: '#',
+    coin: 'COHO',
+    coinName: 'Cosmic Horizon'
   },
   {
     img: DockioIcon,
@@ -125,7 +143,9 @@ export const PRODUCT_CARDS_ARRAY = [
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
     isWithArrow: true,
-    link: '#'
+    link: '#',
+    coin: 'DOCK',
+    coinName: 'Dock'
   }
 ];
 

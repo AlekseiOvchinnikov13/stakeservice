@@ -1,7 +1,7 @@
 @import './src/assets/style/vars';
 
 .paragraph-text {
-  font-family: 'Roboto', sans-serif;
+  font-family: $FONT_ROBOTO, sans-serif;
   font-size: 18px;
   line-height: 160%;
   color: $FONT_WHITE_COLOR;

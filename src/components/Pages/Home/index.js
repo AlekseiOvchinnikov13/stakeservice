@@ -20,19 +20,15 @@ import SubTitleBlock from '../../SubTitleBlock';
 import TextStroke from '../../TextStroke';
 import WhatWeDoBg from './images/what-we-do-bg.svg';
 import Fade from 'react-reveal/Fade';
-import {useEffect, useState} from 'react';
-import {getPublication} from '../../../api/api';
+import {useContext} from 'react';
 import {CALCULATOR_STROKE_TEXT, CALCULATOR_TITLE} from '../../../data/calculator';
 import BlogCard from '../../BlogCard';
 import LinkArrow from '../../LinkArrow';
+import {PostsContext} from '../../../context/postsContext';
+import Calculator from '../../Calculator';
 
 const Home = () => {
-  const [publications, setPublications] = useState(null);
-  //const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    getPublication().then(res => setPublications(res));
-  }, []);
+  const posts = useContext(PostsContext);
 
   return (
     <>
@@ -92,17 +88,20 @@ const Home = () => {
           <TextStroke text={BLOG_SUBTITLE} className="right-center"/>
         </div>
         <div className="blog-cards">
-          {publications && publications.slice(6).map(card =>
+          {posts && posts.slice(6).map(card =>
             <BlogCard data={card} key={card.title}/>
           )}
         </div>
       </section>
       <section id="calculator" className="container">
-        <SubTitleBlock
-          label={CALCULATOR_TITLE}
-          className="blue-stick"
-        />
-        <TextStroke text={CALCULATOR_STROKE_TEXT} className="center"/>
+        <div className="calculator-header">
+          <SubTitleBlock
+            label={CALCULATOR_TITLE}
+            className="blue-stick"
+          />
+          <TextStroke text={CALCULATOR_STROKE_TEXT} className="right-bottom"/>
+        </div>
+        <Calculator/>
       </section>
       {/*<section id="contact"></section>*/}
     </>

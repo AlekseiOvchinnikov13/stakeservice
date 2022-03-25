@@ -4,3 +4,7 @@ export const menu = [
   {label: 'Blog', to: '/#blog'},
   {label: 'Contact', to: '/#contact'}
 ];
+
+export const menuCalcItem = {
+  label: 'Calculator', to: '/#calculator'
+};

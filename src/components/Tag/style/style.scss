@@ -1,6 +1,8 @@
+@import './src/assets/style/vars';
+
 .tag {
   font-weight: 500;
-  font-family: 'Roboto', sans-serif;
+  font-family: $FONT_ROBOTO, sans-serif;
   line-height: 22px;
   background: rgba(126, 209, 255, 0.16);
   border-radius: 4px;

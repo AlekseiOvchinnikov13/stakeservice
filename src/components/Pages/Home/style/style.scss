@@ -91,8 +91,12 @@
 }
 
 #calculator {
-  position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
+
+  .calculator-header {
+    position: relative;
+    padding-bottom: 192px;
+  }
 }
 
 .section-padding {

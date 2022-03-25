@@ -1,12 +1,14 @@
-import Button from '../../Button/Button';
-import {CALCULATOR_TITLE} from '../../../data/calculator';
+import {NavHashLink} from 'react-router-hash-link';
+import {menuCalcItem} from '../../../data/menu';
+import './style/style.scss';
 
 const CalculatorButton = () =>
-  <Button
-    label={CALCULATOR_TITLE}
+  <NavHashLink
+    smooth
     className={'calculator-button'}
-    onClick={() => {
-    }}
-  />;
+    to={menuCalcItem.to}
+  >
+    {menuCalcItem.label}
+  </NavHashLink>;
 
 export default CalculatorButton;
