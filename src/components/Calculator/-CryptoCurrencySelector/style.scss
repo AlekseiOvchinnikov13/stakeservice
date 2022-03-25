@@ -1,0 +1,69 @@
+@import './src/assets/style/vars';
+
+.crypto-currency {
+  position: relative;
+
+  .arrow-down {
+    border: none;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+
+    .arrow-down-svg {
+      fill: $FONT_LIGHT_GRAY_COLOR;
+      opacity: 0.4;
+      text-shadow: 0 0 3px $CALCULATOR_TEXT_SHADOW_COLOR;
+    }
+  }
+
+  .select-currency-wrapper {
+    position: absolute;
+    z-index: 4;
+    top: 100%;
+    width: 100%;
+    height: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: $HIGH_FIDELITY_BLUE_COLOR;
+    border-radius: 0 0 16px 16px;
+    border: 3px solid $CALCULATOR_BORDER_COLOR;
+    border-top: none;
+    overflow: auto;
+
+    transition: height .4s ease-in-out;
+  }
+
+  .select-currency-wrapper-open {
+    height: 250px;
+  }
+}
+
+.crypto-currency-active {
+  .arrow-down .arrow-down-svg {
+    fill: $HIGH_FIDELITY_PURPLE_COLOR;
+    opacity: 1;
+    text-shadow: none;
+  }
+}
+
+.currency-name {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 44px;
+  color: $FONT_LIGHT_GRAY_COLOR;
+
+  position: relative;
+  z-index: 1;
+
+  opacity: 0.4;
+  text-shadow: 0 0 3px $CALCULATOR_TEXT_SHADOW_COLOR;
+}
+
+.currency-name-active {
+  color: $HIGH_FIDELITY_PURPLE_COLOR;
+  opacity: 1;
+  text-shadow: none;
+}

@@ -1,0 +1,24 @@
+@import './src/assets/style/vars';
+
+.select-currency-wrapper {
+  button {
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: $HIGH_FIDELITY_PURPLE_COLOR;
+    background-color: transparent;
+    border: none;
+    padding: 12px 5px;
+    border-top: 1px solid $CALCULATOR_BORDER_COLOR;
+    border-bottom: 1px solid $CALCULATOR_BORDER_COLOR;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  .ScrollbarsCustom-ThumbY {
+    background-color: $HIGH_FIDELITY_PURPLE_COLOR !important;
+  }
+}
