@@ -6,7 +6,6 @@ import {
   BLOG_SUBTITLE,
   OUR_BEGINNING_SUBTITLE,
   OUR_BEGINNING_TEXT,
-  PRODUCT_CARDS_ARRAY,
   RELIABLE_VALIDATOR,
   SUB_TITLE,
   TITLE,
@@ -15,7 +14,6 @@ import {
 } from '../../../data/home';
 import './style/style.scss';
 import TopBg from './images/top-bg.svg';
-import ProjectViewCard from './-projectViewCard/ProjectViewCard';
 import SubTitleBlock from '../../SubTitleBlock';
 import TextStroke from '../../TextStroke';
 import WhatWeDoBg from './images/what-we-do-bg.svg';
@@ -25,10 +23,14 @@ import {CALCULATOR_STROKE_TEXT, CALCULATOR_TITLE} from '../../../data/calculator
 import BlogCard from '../../BlogCard';
 import LinkArrow from '../../LinkArrow';
 import {PostsContext} from '../../../context/postsContext';
+import {CoinsContext} from '../../../context/CoinsContext';
+import Loader from '../../Loader';
+import ProjectViewCard from '../../ProjectViewCard';
 import Calculator from '../../Calculator';
 
 const Home = () => {
   const posts = useContext(PostsContext);
+  const coins = useContext(CoinsContext);
 
   return (
     <>
@@ -42,9 +44,10 @@ const Home = () => {
         <img src={TopBg} alt="top background" className="top-content__top-background"/>
       </section>
       <section id="project" className="container">
-        {PRODUCT_CARDS_ARRAY.map(card =>
-          <ProjectViewCard key={card.label} card={card}/>
-        )}
+        {coins.length > 0
+          ? coins.map(card =>
+            <ProjectViewCard key={card.coin} card={card}/>)
+          : <Loader/>}
       </section>
       <section id="about-us" className="container section-padding">
         <div className="about-us-block">
@@ -101,7 +104,10 @@ const Home = () => {
           />
           <TextStroke text={CALCULATOR_STROKE_TEXT} className="right-bottom"/>
         </div>
-        <Calculator/>
+        {coins.length > 0
+          ? <Calculator/>
+          : <Loader/>
+        }
       </section>
       {/*<section id="contact"></section>*/}
     </>

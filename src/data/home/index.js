@@ -1,13 +1,4 @@
-import SolanaIcon from '../images/project cards/project-icon-solana.png';
-import CeloIcon from '../images/project cards/project-icon-celo.png';
-import GraphIcon from '../images/project cards/project-icon-graph.png';
-import OasisIcon from '../images/project cards/project-icon-oasis.png';
-import AgoricIcon from '../images/project cards/project-icon-agoric.png';
-import RegenIcon from '../images/project cards/project-icon-regen.png';
-import SentinelIcon from '../images/project cards/project-icon-sentinel.png';
-import DockioIcon from '../images/project cards/project-icon-dockio.png';
 import CosmicHorizonIcon from '../images/project cards/project-icon-cosmic-horizon.png';
-import CentrifugeIcon from '../images/project cards/project-icon-centrifuge.webp';
 
 export const TITLE = 'VALIDATOR';
 export const SUB_TITLE = 'Trusted & Secure';
@@ -28,124 +19,107 @@ export const BLOG_SUBTITLE = 'read more';
 
 export const PRODUCT_CARDS_ARRAY = [
   {
-    img: SolanaIcon,
-    label: 'solana',
+    id: 'solana',
     percent: '5.87&nbsp;%',
     isSoon: false,
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
     isWithArrow: true,
     link: '#',
-    coin: 'SOL',
-    coinName: 'Solana'
+    percentNumber: 5.87
   },
   {
-    img: CeloIcon,
-    label: 'celo',
+    id: 'celo',
     percent: '2.45&nbsp;%',
     isSoon: false,
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
     isWithArrow: true,
     link: '#',
-    coin: 'CELO',
-    coinName: 'Celo'
+    percentNumber: 2.45
   },
   {
-    img: GraphIcon,
-    label: 'the graph',
+    id: 'the-graph',
     percent: '10&nbsp;%',
     isSoon: false,
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
     isWithArrow: true,
     link: '#',
-    coin: 'GRT',
-    coinName: 'The Graph'
+    percentNumber: 10
   },
   {
-    img: OasisIcon,
-    label: 'oasis',
+    id: 'oasis-network',
     percent: '10.2&nbsp;%',
     isSoon: false,
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
     isWithArrow: true,
     link: '#',
-    coin: 'ROSE',
-    coinName: 'Oasis Network'
+    percentNumber: 10.2
   },
   {
-    img: AgoricIcon,
-    label: 'agorik',
+    id: 'agoric',
     percent: '',
     isSoon: false,
     rewardText: 'Nominal Reward (soon)',
     exploreText: 'Explore',
     isWithArrow: true,
     link: '#',
-    coin: 'BLD',
-    coinName: 'Agoric'
+    percentNumber: 1
   },
   {
-    img: RegenIcon,
-    label: 'regen',
+    id: 'regen',
     percent: '29.03&nbsp;%',
     isSoon: false,
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
     isWithArrow: true,
     link: '#',
-    coin: 'REGEN',
-    coinName: 'Regen Network'
+    percentNumber: 29.03
   },
   {
-    img: SentinelIcon,
-    label: 'sentinel',
+    id: 'sentinel',
     percent: '28.49&nbsp;%',
     isSoon: false,
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
     isWithArrow: true,
     link: '#',
-    coin: 'DVPN',
-    coinName: 'Sentinel'
+    percentNumber: 28.49
   },
   {
-    img: CentrifugeIcon,
-    label: 'centrifuge',
+    id: 'centrifuge',
     percent: '',
     isSoon: false,
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
     isWithArrow: true,
     link: '#',
-    coin: 'CFG',
-    coinName: 'Centrifuge'
+    percentNumber: 1.2
   },
   {
     img: CosmicHorizonIcon,
-    label: 'cosmic horizon',
     percent: '',
+    id: 'cosmic-horizon',
     isSoon: true,
     rewardText: '',
     exploreText: 'Explore',
     isWithArrow: true,
     link: '#',
-    coin: 'COHO',
-    coinName: 'Cosmic Horizon'
+    coin: 'coho',
+    coinName: 'Cosmic Horizon',
+    percentNumber: 1.3
   },
   {
-    img: DockioIcon,
-    label: 'dock.io',
+    id: 'dock',
     percent: '',
     isSoon: false,
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
     isWithArrow: true,
     link: '#',
-    coin: 'DOCK',
-    coinName: 'Dock'
+    percentNumber: 1
   }
 ];
 

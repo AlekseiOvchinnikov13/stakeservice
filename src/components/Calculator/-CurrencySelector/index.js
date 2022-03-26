@@ -67,10 +67,10 @@ const CurrencySelector = ({
 };
 
 CurrencySelector.propTypes = {
-  selectedCurrency: PropTypes.object.isRequired,
-  setSelectedCurrency: PropTypes.func.isRequired,
-  activeCurrency: PropTypes.object.isRequired,
-  setActiveCurrency: PropTypes.func.isRequired
+  selectedCurrency: PropTypes.object,
+  setSelectedCurrency: PropTypes.func,
+  activeCurrency: PropTypes.object,
+  setActiveCurrency: PropTypes.func
 };
 
 export default CurrencySelector;

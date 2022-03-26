@@ -2,8 +2,8 @@ import ArrowDown from '../-ArrowDown';
 import Scrollbar from 'react-scrollbars-custom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import './style.scss';
 import Selector from '../-Selector';
+import './style.scss';
 
 const CryptoCurrencySelector = ({
   isOpenSelect,
@@ -39,7 +39,7 @@ const CryptoCurrencySelector = ({
   return (
     <div className={cryptoCurrencyClasses}>
       <span className={cryptoCurrencyNameClasses}>
-        {`${coinName} (${coin})`}
+        {`${coinName} (${coin.toUpperCase()})`}
       </span>
       <button
         className="arrow-down"
@@ -60,11 +60,11 @@ const CryptoCurrencySelector = ({
 };
 
 CryptoCurrencySelector.propTypes = {
-  isOpenSelect: PropTypes.bool.isRequired,
-  onClickArrowSelect: PropTypes.func.isRequired,
-  onClickSelectCurrency: PropTypes.func.isRequired,
-  selectedCurrency: PropTypes.object.isRequired,
-  isCryptoActive: PropTypes.bool.isRequired
+  isOpenSelect: PropTypes.bool,
+  onClickArrowSelect: PropTypes.func,
+  onClickSelectCurrency: PropTypes.func,
+  selectedCurrency: PropTypes.object,
+  isCryptoActive: PropTypes.bool
 };
 
 export default CryptoCurrencySelector;

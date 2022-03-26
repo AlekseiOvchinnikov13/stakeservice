@@ -6,7 +6,7 @@ import Arrow from './images/arrow-right.svg';
 const ProjectViewCard = ({
   card: {
     img,
-    label,
+    coinName,
     percent,
     isSoon,
     rewardText,
@@ -17,8 +17,8 @@ const ProjectViewCard = ({
 }) => {
   return (
     <div className="project-view-card">
-      <img src={img} alt={label} className="project-view-card__img"/>
-      <p className="project-view-card__label">{label}</p>
+      <img src={img} alt={coinName} className="project-view-card__img"/>
+      <p className="project-view-card__label">{coinName}</p>
       {!isSoon && <p
         dangerouslySetInnerHTML={{
           __html: percent

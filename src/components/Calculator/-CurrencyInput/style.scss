@@ -1,0 +1,48 @@
+@import './src/assets/style/vars';
+
+.currency-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  border-radius: 4px;
+  padding: 20px 48px;
+  border: 2px solid $HIGH_FIDELITY_WHITE_COLOR;
+  background-color: $HIGH_FIDELITY_WHITE_COLOR;
+
+  transition: all .4s ease-in-out;
+
+  span {
+    font-family: $FONT_RALEWAY;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 50px;
+    color: $FONT_LIGHT_GRAY_COLOR;
+    text-shadow: 0 0 3px $CALCULATOR_TEXT_SHADOW_COLOR;
+    opacity: .4;
+  }
+
+  input {
+    border: none;
+    background-color: transparent;
+    font-family: $FONT_MONTSERRAT;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: $WIREFRAME_WHITE_COLOR;
+    outline: none;
+
+    -moz-appearance: textfield;
+    appearance: none;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+.active-input {
+  border: 2px solid $HIGH_FIDELITY_BLUE_COLOR;
+}

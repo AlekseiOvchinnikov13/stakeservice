@@ -1,19 +1,22 @@
 import PropTypes from 'prop-types';
-import {PRODUCT_CARDS_ARRAY} from '../../../data/home';
+import {useContext} from 'react';
+import {CoinsContext} from '../../../context/CoinsContext';
 import './style.scss';
 
 const Selector = ({
   coinName,
   onClickSelectCurrency
 }) => {
+  const coins = useContext(CoinsContext);
+
   return (
     <>
-      {PRODUCT_CARDS_ARRAY.filter(el => el.coinName !== coinName).map(currency =>
+      {coins && coins.filter(el => el.coinName !== coinName && el.price).map(currency =>
         <button
-          key={currency.label}
+          key={currency.coin}
           onClick={() => onClickSelectCurrency(currency)}
         >
-          {`${currency.coinName} (${currency.coin})`}
+          {`${currency.coinName} (${currency.coin.toUpperCase()})`}
         </button>
       )}
     </>
@@ -21,8 +24,8 @@ const Selector = ({
 };
 
 Selector.propTypes = {
-  coinName: PropTypes.string.isRequired,
-  onClickSelectCurrency: PropTypes.func.isRequired
+  coinName: PropTypes.string,
+  onClickSelectCurrency: PropTypes.func
 };
 
 export default Selector;

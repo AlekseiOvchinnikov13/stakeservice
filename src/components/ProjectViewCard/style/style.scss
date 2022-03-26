@@ -1,4 +1,4 @@
-@import '../../../../../assets/style/vars';
+@import '../../../assets/style/vars';
 
 .project-view-card {
   width: 280px;
@@ -19,6 +19,7 @@
 
   &__img {
     width: 56px;
+    border-radius: 50%;
   }
 
   &__label {
