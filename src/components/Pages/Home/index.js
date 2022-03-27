@@ -4,6 +4,9 @@ import {
   ABOUT_US_TEXT,
   BLOG,
   BLOG_SUBTITLE,
+  CONTACT,
+  CONTACT_SUBTITLE,
+  CONTACT_TEXT,
   OUR_BEGINNING_SUBTITLE,
   OUR_BEGINNING_TEXT,
   RELIABLE_VALIDATOR,
@@ -109,7 +112,23 @@ const Home = () => {
           : <Loader/>
         }
       </section>
-      {/*<section id="contact"></section>*/}
+      <section id="contact" className="container">
+        <div className="contact-header">
+          <SubTitleBlock
+            label={CONTACT}
+            text={CONTACT_TEXT}
+            className="blue-stick"
+          />
+          <TextStroke
+            text={CONTACT_SUBTITLE}
+            className="right-up"
+            isNonCase
+          />
+        </div>
+        <div className="contact-form">
+          <input type="text"/>
+        </div>
+      </section>
     </>
   );
 };

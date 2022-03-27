@@ -10,8 +10,8 @@ const Calculator = () => {
   const coins = useContext(CoinsContext);
   const [selectedCurrency, setSelectedCurrency] = useState(coins[0]);
   const [activeCurrency, setActiveCurrency] = useState({crypto: true, usd: false});
-  const [cryptoValue, setCryptoValue] = useState(0);
-  const [usdValue, setUsdValue] = useState(0);
+  const [cryptoValue, setCryptoValue] = useState(1);
+  const [usdValue, setUsdValue] = useState(1);
 
   const onChangeInputValue = val => {
     if (activeCurrency.crypto) {

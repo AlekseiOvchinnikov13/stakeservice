@@ -17,6 +17,10 @@
   text-transform: uppercase;
 }
 
+.text-non-case {
+  text-transform: none;
+}
+
 .right-center, .right-up, .right-bottom {
   position: absolute;
   right: -90px;

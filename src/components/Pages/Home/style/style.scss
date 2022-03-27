@@ -67,7 +67,7 @@
 }
 
 #blog {
-  padding-bottom: 200px;
+  padding-bottom: 150px;
 
   .blog-header {
     position: relative;
@@ -95,6 +95,13 @@
   .calculator-header {
     position: relative;
     padding-bottom: 192px;
+  }
+}
+
+#contact {
+  .contact-header {
+    position: relative;
+    padding-bottom: 40px;
   }
 }
 

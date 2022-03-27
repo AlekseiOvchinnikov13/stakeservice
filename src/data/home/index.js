@@ -17,6 +17,10 @@ export const WHAT_WE_DO_TEXT = 'You can join the network by&nbsp;delegating your
 export const BLOG = 'blog';
 export const BLOG_SUBTITLE = 'read more';
 
+export const CONTACT = 'contact';
+export const CONTACT_TEXT = 'Write to us';
+export const CONTACT_SUBTITLE = 'You can trust us!';
+
 export const PRODUCT_CARDS_ARRAY = [
   {
     id: 'solana',
