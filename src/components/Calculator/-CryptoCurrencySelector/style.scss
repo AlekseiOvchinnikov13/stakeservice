@@ -3,16 +3,26 @@
 .crypto-currency {
   position: relative;
 
-  .arrow-down {
+  .button-selector-currency {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     background-color: transparent;
+    font-family: $FONT_RALEWAY;
+
     position: relative;
     z-index: 1;
 
-    .arrow-down-svg {
-      fill: $FONT_LIGHT_GRAY_COLOR;
-      opacity: 0.4;
-      text-shadow: 0 0 3px $CALCULATOR_TEXT_SHADOW_COLOR;
+    .arrow-down {
+      padding-left: 5px;
+      transition: all .3s ease-in-out;
+
+      .arrow-down-svg {
+        fill: $FONT_LIGHT_GRAY_COLOR;
+        opacity: 0.4;
+        text-shadow: 0 0 3px $CALCULATOR_TEXT_SHADOW_COLOR;
+      }
     }
   }
 
@@ -20,32 +30,47 @@
     position: absolute;
     z-index: 4;
     top: 100%;
-    width: 100%;
+    width: 0;
     height: 0;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: transparent;
 
-    background-color: $HIGH_FIDELITY_BLUE_COLOR;
     border-radius: 0 0 16px 16px;
-    border: 3px solid $CALCULATOR_BORDER_COLOR;
+    border: 3px solid transparent;
     border-top: none;
     overflow: auto;
 
-    transition: height .4s ease-in-out;
+    transition: all .3s ease-in-out;
   }
 
   .select-currency-wrapper-open {
     height: 250px;
+    width: 100%;
+    border: 3px solid $CALCULATOR_BORDER_COLOR;
+    background-color: $HIGH_FIDELITY_BLUE_COLOR;
   }
 }
 
 .crypto-currency-active {
-  .arrow-down .arrow-down-svg {
-    fill: $HIGH_FIDELITY_PURPLE_COLOR;
-    opacity: 1;
-    text-shadow: none;
+  .button-selector-currency {
+    .arrow-down {
+      .arrow-down-svg {
+        fill: $HIGH_FIDELITY_PURPLE_COLOR;
+        opacity: 1;
+        text-shadow: none;
+      }
+    }
+  }
+}
+
+.crypto-currency-open-selector {
+  .button-selector-currency {
+    .arrow-down {
+      transform: scale(1, -1);
+    }
   }
 }
 

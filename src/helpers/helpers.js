@@ -19,3 +19,9 @@ export const cleanText = text => {
  */
 export const dateTimeToDateFormat = (date) =>
   format(new Date(date), DATE_FORMAT);
+
+/**
+ * Get APY percent by coin name
+ */
+export const getPercentByCoin = (coin, list) =>
+  list.filter(el => el.coin === coin)[0].percentNumber;

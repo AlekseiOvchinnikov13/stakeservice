@@ -1,0 +1,41 @@
+@import './src/assets/style/vars';
+
+.earning-card {
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-radius: 16px;
+  border: 1px solid $HIGH_FIDELITY_BLUE_COLOR;
+  box-shadow: 0 1.1966px 29.915px $EARNING_CARD_BOX_SHADOW;
+  backdrop-filter: blur(40px);
+  background: $HIGH_FIDELITY_WHITE_COLOR;
+
+  max-width: 30%;
+  width: 100%;
+  height: 200px;
+
+  &__text {
+    font-family: $FONT_ROBOTO;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    color: $FONT_DARK_GRAY_COLOR;
+  }
+
+  &__active-text {
+    font-family: $FONT_MONTSERRAT;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    color: $HIGH_FIDELITY_BLUE_COLOR;
+  }
+
+  &__profit-period {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: $WIREFRAME_WHITE_COLOR;
+  }
+}

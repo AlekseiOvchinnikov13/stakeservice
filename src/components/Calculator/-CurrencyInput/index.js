@@ -1,18 +1,20 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './style.scss';
-import {useState} from 'react';
 
-const CurrencyInput = ({className, coin, isActive}) => {
-  const [value, setValue] = useState(0);
+const CurrencyInput = ({
+  className,
+  coin,
+  isActive,
+  value,
+  setValue
+}) => {
+
   const classes = classNames(
     'currency-input',
     className,
     {'active-input': isActive}
   );
-
-  const onChangeValue = e =>
-    setValue(e.target.value.replace(',', '.'));
 
   return (
     <div className={classes}>
@@ -20,7 +22,7 @@ const CurrencyInput = ({className, coin, isActive}) => {
         type="number"
         step="any"
         min="0"
-        onChange={onChangeValue}
+        onChange={setValue}
         value={value}
         readOnly={!isActive}
       />
@@ -32,7 +34,9 @@ const CurrencyInput = ({className, coin, isActive}) => {
 CurrencyInput.propTypes = {
   className: PropTypes.string,
   coin: PropTypes.string,
-  isActive: PropTypes.bool
+  isActive: PropTypes.bool,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  setValue: PropTypes.func,
 };
 
 export default CurrencyInput;

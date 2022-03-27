@@ -1,6 +1,17 @@
 @import './src/assets/style/vars';
 @import './src/components/Calculator/style/animation';
 
+.calculator, .earning-block {
+  flex-direction: row;
+}
+
+.calculator, .earning-block, .currency-inputs-block {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .calculator {
   display: flex;
   flex-wrap: nowrap;
@@ -11,12 +22,14 @@
   height: 360px;
 
   .currency-inputs-block {
-    display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
     width: 75%;
     height: 100%;
   }
 }
+
+.earning-block {
+  width: 100%;
+
+}
+
