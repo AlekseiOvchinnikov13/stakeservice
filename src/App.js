@@ -7,6 +7,7 @@ import {useEffect, useState} from 'react';
 import {getCoinsMarkets, getFeeds} from './api/api';
 import {CoinsContext} from './context/CoinsContext';
 import {PRODUCT_CARDS_ARRAY} from './data/home';
+import Footer from './components/Footer';
 
 const App = () => {
   const [posts, setPosts] = useState();
@@ -45,6 +46,7 @@ const App = () => {
 
             <Route path="/" component={Home}/>
           </Switch>
+          <Footer/>
         </BrowserRouter>
       </CoinsContext.Provider>
     </PostsContext.Provider>

@@ -1,9 +1,9 @@
 import './style/style.scss';
 import PropTypes from 'prop-types';
 import Text from '../Text';
-import Tag from '../Tag';
+import Tag from './-Tag';
 import {cleanText, dateTimeToDateFormat} from '../../helpers/helpers';
-import LinkArrow from '../LinkArrow';
+import LinkArrow from './-LinkArrow';
 
 const BlogCard = (
   {

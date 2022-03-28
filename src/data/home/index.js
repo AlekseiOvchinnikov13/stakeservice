@@ -1,4 +1,7 @@
-import CosmicHorizonIcon from '../images/project cards/project-icon-cosmic-horizon.png';
+import CosmicHorizonIcon from '../images/project-cards/project-icon-cosmic-horizon.png';
+import ContactLinkMail from '../images/contact-links/contact-link-mail.svg';
+import ContactLinkTwitter from '../images/contact-links/contact-link-twitter.svg';
+import ContactLinkMedium from '../images/contact-links/contact-link-medium.svg';
 
 export const TITLE = 'VALIDATOR';
 export const SUB_TITLE = 'Trusted & Secure';
@@ -20,6 +23,27 @@ export const BLOG_SUBTITLE = 'read more';
 export const CONTACT = 'contact';
 export const CONTACT_TEXT = 'Write to us';
 export const CONTACT_SUBTITLE = 'You can trust us!';
+
+export const OUR_CONTACT = 'our contacts';
+export const CONTACTS_SUBTITLE = 'Contacts';
+export const CONTACT_LINKS = [
+  {
+    img: ContactLinkMail,
+    label: 'tech@stakeservice.com',
+    href: 'mailto:tech@stakeservice.com'
+  },
+  {
+    img: ContactLinkTwitter,
+    label: 'twitter.com/stakeservice',
+    href: 'https://twitter.com/stakeservice'
+  },
+  {
+    img: ContactLinkMedium,
+    label: 'medium.com/stake-service',
+    href: 'https://medium.com/stake-service'
+  }
+];
+
 
 export const PRODUCT_CARDS_ARRAY = [
   {

@@ -1,11 +1,11 @@
-import './style/style.scss';
 import Menu from './-Menu';
 import Logo from './-Logo';
 import CalculatorButton from './-CalculatorButton';
+import './style/style.scss';
 
 const Header = () => {
   return (
-    <header className='header'>
+    <header className="header container">
       <Logo/>
       <Menu/>
       <CalculatorButton/>

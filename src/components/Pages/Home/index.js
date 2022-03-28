@@ -7,8 +7,10 @@ import {
   CONTACT,
   CONTACT_SUBTITLE,
   CONTACT_TEXT,
+  CONTACTS_SUBTITLE,
   OUR_BEGINNING_SUBTITLE,
   OUR_BEGINNING_TEXT,
+  OUR_CONTACT,
   RELIABLE_VALIDATOR,
   SUB_TITLE,
   TITLE,
@@ -17,6 +19,7 @@ import {
 } from '../../../data/home';
 import './style/style.scss';
 import TopBg from './images/top-bg.svg';
+import FooterBg from './images/footer-bg.svg';
 import SubTitleBlock from '../../SubTitleBlock';
 import TextStroke from '../../TextStroke';
 import WhatWeDoBg from './images/what-we-do-bg.svg';
@@ -24,12 +27,14 @@ import Fade from 'react-reveal/Fade';
 import {useContext} from 'react';
 import {CALCULATOR_STROKE_TEXT, CALCULATOR_TITLE} from '../../../data/calculator';
 import BlogCard from '../../BlogCard';
-import LinkArrow from '../../LinkArrow';
+import LinkArrow from '../../BlogCard/-LinkArrow';
 import {PostsContext} from '../../../context/postsContext';
 import {CoinsContext} from '../../../context/CoinsContext';
 import Loader from '../../Loader';
 import ProjectViewCard from '../../ProjectViewCard';
 import Calculator from '../../Calculator';
+import ContactForm from '../../ContactForm';
+import Contacts from '../../Contacts';
 
 const Home = () => {
   const posts = useContext(PostsContext);
@@ -58,7 +63,7 @@ const Home = () => {
             label={ABOUT_US}
             title={ABOUT_US_SUBTITLE}
             text={ABOUT_US_TEXT}
-            className="blue-stick"
+            isBlueStick
           />
           <TextStroke text={ABOUT_US} className="right-center"/>
         </div>
@@ -79,7 +84,7 @@ const Home = () => {
           <SubTitleBlock
             label={WHAT_WE_DO}
             text={WHAT_WE_DO_TEXT}
-            className="blue-stick"
+            isBlueStick
           />
           <TextStroke text={WHAT_WE_DO} className="right-up"/>
         </div>
@@ -89,7 +94,7 @@ const Home = () => {
           <SubTitleBlock
             label={BLOG}
             Component={LinkArrow}
-            className="blue-stick"
+            isBlueStick
           />
           <TextStroke text={BLOG_SUBTITLE} className="right-center"/>
         </div>
@@ -103,7 +108,7 @@ const Home = () => {
         <div className="calculator-header">
           <SubTitleBlock
             label={CALCULATOR_TITLE}
-            className="blue-stick"
+            isBlueStick
           />
           <TextStroke text={CALCULATOR_STROKE_TEXT} className="right-bottom"/>
         </div>
@@ -117,7 +122,7 @@ const Home = () => {
           <SubTitleBlock
             label={CONTACT}
             text={CONTACT_TEXT}
-            className="blue-stick"
+            isBlueStick
           />
           <TextStroke
             text={CONTACT_SUBTITLE}
@@ -126,8 +131,21 @@ const Home = () => {
           />
         </div>
         <div className="contact-form">
-          <input type="text"/>
+          <ContactForm/>
         </div>
+        <div className="contact-footer">
+          <SubTitleBlock
+            label={OUR_CONTACT}
+            isBlueStick
+            Component={Contacts}
+          />
+          <TextStroke
+            text={CONTACTS_SUBTITLE}
+            className="right-center"
+            isNonCase
+          />
+        </div>
+        <img src={FooterBg} alt="footer background" className="contact-footer__background"/>
       </section>
     </>
   );

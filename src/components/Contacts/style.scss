@@ -1,0 +1,27 @@
+@import './src/assets/style/vars';
+
+.contacts-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 64px;
+
+  &__item {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+
+    span {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 24px;
+      color: $FONT_WHITE_COLOR;
+
+      padding-left: 15px;
+    }
+  }
+
+  &__item + &__item {
+    margin-top: 15px;
+  }
+}
