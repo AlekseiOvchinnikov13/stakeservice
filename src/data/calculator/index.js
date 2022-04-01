@@ -6,7 +6,7 @@ export const CALCULATOR_DOLLAR_SYMBOL = '$';
 export const EARNING_CARDS_DATA = [
   {
     period: 'Daily Earning',
-    count: 1 / 12 / 30,
+    count: 1 / 365,
   },
   {
     period: 'Monthly Earning',

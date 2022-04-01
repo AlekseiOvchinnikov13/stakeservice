@@ -1,4 +1,4 @@
-import ToggleArrow from '../images/toggle-arrow.svg';
+import ToggleArrow from './images/toggle-arrow.svg';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import './style.scss';

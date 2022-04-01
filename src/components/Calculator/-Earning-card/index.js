@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import {CALCULATOR_DOLLAR_SYMBOL} from '../../../data/calculator';
 import {useContext} from 'react';
 import {CoinsContext} from '../../../context/CoinsContext';
-import {getPercentByCoin} from '../../../helpers/helpers';
+import {getProfitByCoin} from '../../../helpers/helpers';
 
 const EarningCard = ({
   isCryptoActive,
@@ -33,10 +33,10 @@ const EarningCard = ({
   return (
     <div className="earning-card">
       <span className={usdTextClasses}>
-        {`${CALCULATOR_DOLLAR_SYMBOL} ${(usdValue * count * getPercentByCoin(coin, coins)).toFixed(2)}`}
+        {`${CALCULATOR_DOLLAR_SYMBOL} ${(usdValue * count * getProfitByCoin(coin, coins)).toFixed(4)}`}
       </span>
       <span className={cryptoTextClasses}>
-        {`${coin.toUpperCase()} ${(cryptoValue * count * getPercentByCoin(coin, coins)).toFixed(2)}`}
+        {`${coin.toUpperCase()} ${(cryptoValue * count * getProfitByCoin(coin, coins)).toFixed(4)}`}
       </span>
       <span className="earning-card__profit-period">
         {period}

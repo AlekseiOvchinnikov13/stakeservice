@@ -1,0 +1,12 @@
+@media (max-width: 1366px) {
+  .blog-card-wrapper {
+    margin: 20px 5px;
+  }
+}
+
+@media (max-width: 950px) {
+  .blog-card-wrapper:first-child {
+    margin-left: 20px;
+  }
+}
+

@@ -1,0 +1,43 @@
+@media (max-width: 1366px) {
+  .subtitle-block h6 {
+    font-size: 52px;
+    line-height: 78px;
+  }
+
+  .subtitle-block {
+    width: 60%;
+  }
+}
+
+@media (max-width: 950px) {
+  .subtitle-block {
+    width: 100%;
+  }
+  .subtitle-block-right {
+    padding-top: 75px;
+  }
+  .subtitle-block span {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .subtitle-block h6 {
+    font-size: 48px;
+    line-height: 64px;
+  }
+  .blue-stick:before {
+    height: 190px;
+  }
+}
+
+@media (max-width: 650px) {
+  .blue-stick:before {
+    height: 250px;
+  }
+}
+
+@media (max-width: 420px) {
+  .subtitle-block h6 {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}

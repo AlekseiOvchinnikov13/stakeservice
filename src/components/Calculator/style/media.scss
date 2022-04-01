@@ -1,0 +1,93 @@
+@media (max-width: 1700px) {
+  .calculator .currency-inputs-block {
+    width: 65%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .calculator .currency-inputs-block {
+    width: 60%;
+  }
+  .earning-block {
+    flex-direction: column;
+  }
+  .earning-block .earning-card {
+    max-width: unset;
+  }
+  .earning-block .earning-card + .earning-card {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 950px) {
+  .calculator {
+    flex-direction: column;
+    height: unset;
+    padding: 24px 0 24px 24px;
+  }
+  .currency-block {
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+
+    margin-bottom: 24px;
+  }
+  .currency-block .color-block {
+    width: 50%;
+    height: 100%;
+    top: 0;
+    border-radius: 4px;
+    left: unset;
+  }
+  .currency-block .color-block-up {
+    animation: blockLeft .3s ease-in-out forwards;
+  }
+  .currency-block .color-block-down {
+    animation: blockRight 0.3s ease-in-out forwards;
+  }
+  .currency-name, .select-currency-wrapper button {
+    font-size: 18px;
+    line-height: 29px;
+  }
+  .crypto-currency .select-currency-wrapper {
+    top: 150%;
+  }
+
+  .calculator .currency-inputs-block {
+    width: 100%;
+  }
+  .crypto-input {
+    margin-bottom: 16px;
+  }
+  .currency-input input, .currency-input span {
+    font-size: 18px;
+    line-height: 29px;
+  }
+  .currency-input {
+    padding: 12px;
+  }
+
+  .earning-block {
+    padding: 24px 0 24px 24px;
+
+    .earning-card {
+      padding: 16px;
+      min-height: 150px;
+      height: 100%;
+    }
+  }
+  .earning-card__active-text, .earning-card__profit-period {
+    font-size: 18px;
+    line-height: 29px;
+  }
+  .earning-card__text {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}

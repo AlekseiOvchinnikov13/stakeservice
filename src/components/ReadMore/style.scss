@@ -1,0 +1,67 @@
+@import './src/assets/style/vars';
+
+.read-more-button {
+  border: none;
+  background-color: transparent;
+  position: relative;
+
+  padding: 25px 25px 0 0;
+  text-align: center;
+
+  color: $HIGH_FIDELITY_BLUE_COLOR;
+  font-family: $FONT_ROBOTO, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+
+  &:hover, &:focus {
+    &:before {
+      transform: rotate(-45deg);
+    }
+
+    &:after {
+      transform: rotate(45deg);
+    }
+  }
+
+  &:before, &:after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 10px;
+    bottom: 10px;
+    background-color: $HIGH_FIDELITY_BLUE_COLOR;
+
+    transition: all .3s ease-in-out;
+  }
+
+  &:before {
+    right: 6px;
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    right: 0;
+    transform: rotate(-45deg);
+  }
+}
+
+.read-more-open {
+  &:hover, &:focus {
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &:before {
+    transform: rotate(-45deg);
+  }
+
+  &:after {
+    transform: rotate(45deg);
+  }
+}

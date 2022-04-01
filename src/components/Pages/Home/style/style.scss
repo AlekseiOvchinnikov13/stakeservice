@@ -2,6 +2,8 @@
 
 .top-content {
   position: relative;
+  padding-top: 200px;
+  padding-bottom: 200px;
 
   &__sub-title {
     color: $FONT_DARK_GRAY_COLOR;
@@ -32,13 +34,25 @@
 
 #project {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+
+  .project-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 #about-us {
+  padding-top: 200px;
+  padding-bottom: 100px;
+
   .about-us-block, .what-we-do {
     position: relative;
 
@@ -121,8 +135,4 @@
   }
 }
 
-.section-padding {
-  padding-top: 200px;
-  padding-bottom: 200px;
-}
-
+@import './media';

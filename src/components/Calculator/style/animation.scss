@@ -24,3 +24,21 @@
     bottom: 50%;
   }
 }
+
+@keyframes blockRight {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+@keyframes blockLeft {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 50%;
+  }
+}

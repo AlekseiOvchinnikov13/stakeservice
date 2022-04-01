@@ -26,7 +26,7 @@ LinkArrow.propTypes = {
 
 LinkArrow.defaultProps = {
   label: 'See All',
-  to: '/'
+  to: '/blog'
 };
 
 export default LinkArrow;

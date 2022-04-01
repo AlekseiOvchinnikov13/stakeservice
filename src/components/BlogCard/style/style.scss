@@ -8,6 +8,7 @@
   height: 385px;
   max-width: 296px;
   width: 100%;
+  margin-top: 25px;
 
   .blog-card__img {
     border-radius: 18px 18px 0 0;
@@ -60,3 +61,5 @@
     display: -webkit-box;
   }
 }
+
+@import './media';

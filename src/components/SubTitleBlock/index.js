@@ -1,7 +1,7 @@
-import './style/style.scss';
 import classNames from 'classnames';
 import Text from '../Text';
 import PropTypes from 'prop-types';
+import './style/style.scss';
 
 const SubTitleBlock = ({label, title, text, Component, className, isBlueStick}) => {
   const classes = classNames(

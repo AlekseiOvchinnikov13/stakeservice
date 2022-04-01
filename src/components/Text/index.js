@@ -1,6 +1,6 @@
-import './style/style.scss';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import './style/style.scss';
 
 const Text = ({text, isDescription}) => {
   const classes = classNames('paragraph-text', {'description-text': isDescription});

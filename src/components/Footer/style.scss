@@ -11,3 +11,18 @@
     line-height: 98px;
   }
 }
+
+@media (max-width: 1520px) {
+  .footer h2 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 750px) {
+  .footer {
+    padding-top: 35px;
+    padding-bottom: 45px;
+  }
+}

@@ -3,7 +3,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from './components/Pages/Home';
 import Header from './components/Header';
 import {PostsContext} from './context/postsContext';
-import {useEffect, useState} from 'react';
+import {useEffect, useLayoutEffect, useState} from 'react';
 import {getCoinsMarkets, getFeeds} from './api/api';
 import {CoinsContext} from './context/CoinsContext';
 import {PRODUCT_CARDS_ARRAY} from './data/home';
@@ -12,6 +12,15 @@ import Footer from './components/Footer';
 const App = () => {
   const [posts, setPosts] = useState();
   const [coinList, setCoinList] = useState([]);
+
+  const [, setSize] = useState([0, 0]);
+  const updateSize = () => setSize([window.innerWidth, window.innerHeight]);
+
+  useLayoutEffect(() => {
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
 
   const getCoins = async () => {
     const data = await getCoinsMarkets();

@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <footer className="footer container">
-      <h2>STAKE SERVICE &copy;&nbsp;{currentYear}</h2>
+      <h2>STAKE SERVICE &copy;&nbsp;2021-{currentYear}</h2>
     </footer>
   );
 };

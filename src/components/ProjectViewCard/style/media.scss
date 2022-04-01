@@ -1,0 +1,43 @@
+@media (max-width: 750px) {
+  .project-view-card__label {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .project-view-card__percent, .project-view-card__soon {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .project-view-card__reward {
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .project-view-card__link {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .project-view-card {
+    width: 165px;
+    height: 190px;
+  }
+  .project-view-card__img {
+    width: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .project-view-card {
+    width: 150px;
+    height: 230px;
+  }
+}
+
+@media (max-width: 420px) {
+  .project-view-card {
+    width: 70%;
+    height: 250px;
+  }
+  .project-view-card__img {
+    width: 40px;
+  }
+}

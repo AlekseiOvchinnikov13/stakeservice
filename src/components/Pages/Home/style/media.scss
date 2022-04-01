@@ -1,0 +1,128 @@
+@media (max-width: 1440px) {
+  .top-content__top-background {
+    width: 100%;
+  }
+  #calculator .calculator-header {
+    position: relative;
+    padding-bottom: 100px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .top-content__title {
+    font-size: 100px;
+    line-height: 1;
+  }
+  .top-content__sub-title {
+    font-size: 32px;
+    line-height: 1.5;
+  }
+
+  .top-content__top-background {
+    width: 90%;
+  }
+
+  #about-us .reliable-validator__background {
+    left: -50px;
+    top: -90px;
+    width: 56%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .top-content {
+    padding-top: 85px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .top-content__top-background {
+    width: 100%;
+    opacity: .5;
+  }
+  .top-content__title {
+    font-size: 48px;
+    line-height: 64px;
+    font-weight: 700;
+  }
+  .top-content__sub-title {
+    font-size: 18px;
+    line-height: 29px;
+  }
+}
+
+@media (max-width: 950px) {
+  .top-content {
+    padding-top: 70px;
+    padding-bottom: 120px;
+  }
+  #about-us {
+    padding-top: 100px;
+  }
+  #about-us .about-us-block .subtitle-block, #about-us .what-we-do .subtitle-block {
+    padding-bottom: 75px;
+  }
+  #about-us .reliable-validator__background {
+    top: 125px;
+    width: 35%;
+    transform: scale(-1, 1);
+    left: auto;
+    right: -40px;
+  }
+  #blog .blog-header .subtitle-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #blog .blog-header .subtitle-block .link-arrow {
+    margin-top: 0;
+  }
+  #blog .blog-header .subtitle-block span {
+    margin-bottom: 0;
+  }
+  #blog .blog-cards {
+    margin-top: -50px;
+  }
+  #blog {
+    padding-bottom: 70px;
+  }
+  #blog .blog-header .blue-stick:before {
+    height: 450px;
+  }
+  #calculator .calculator-header {
+    padding-bottom: 0;
+  }
+  #calculator .calculator-header .blue-stick:before {
+    height: 830px;
+  }
+}
+
+@media (max-width: 650px) {
+  #about-us .reliable-validator {
+    padding-bottom: 140px;
+  }
+  #about-us .reliable-validator__background {
+    top: 180px;
+    width: 40%;
+  }
+}
+
+@media (max-width: 500px) {
+  #about-us .reliable-validator__background {
+    top: 55%;
+    width: 60%;
+    right: -20px;
+
+  }
+}
+
+@media (max-width: 420px) {
+  #project .project-cards-wrapper {
+    justify-content: center;
+  }
+  #about-us .reliable-validator__background {
+    width: 80%;
+  }
+}

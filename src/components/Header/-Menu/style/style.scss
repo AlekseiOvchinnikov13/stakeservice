@@ -1,6 +1,8 @@
 @import "/src/assets/style/vars";
 
 .menu {
+  padding: 0;
+
   .menu-list {
     list-style-type: none;
     display: flex;
@@ -22,3 +24,5 @@
     }
   }
 }
+
+@import './media';
