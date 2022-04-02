@@ -91,3 +91,18 @@
     line-height: 22px;
   }
 }
+
+@media (max-width: 420px) {
+  .crypto-currency .button-selector-currency {
+    padding: 0;
+    width: 81%;
+    justify-content: flex-start;
+  }
+  .currency-block .crypto-currency {
+    padding-left: 10px;
+    justify-content: flex-start;
+  }
+  .crypto-currency .select-currency-wrapper {
+    left: 0;
+  }
+}

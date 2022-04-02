@@ -11,7 +11,7 @@ const Selector = ({
 
   return (
     <>
-      {coins && coins.filter(el => el.coinName !== coinName && el.price).map(currency =>
+      {coins && coins.filter(el => el.coinName !== coinName && el.price && el.percentNumber).map(currency =>
         <button
           key={currency.coin}
           onClick={() => onClickSelectCurrency(currency)}

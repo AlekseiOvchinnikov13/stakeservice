@@ -25,3 +25,14 @@
     margin-top: 15px;
   }
 }
+
+@media (max-width: 950px) {
+  .contacts-links {
+    margin-top: 25px;
+  }
+  .contacts-links__item span {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+  }
+}

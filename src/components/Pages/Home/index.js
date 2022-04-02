@@ -4,8 +4,13 @@ import {
   ABOUT_US_TEXT,
   BLOG,
   BLOG_SUBTITLE,
+  CONTACT,
+  CONTACT_SUBTITLE,
+  CONTACT_TEXT,
+  CONTACTS_SUBTITLE,
   OUR_BEGINNING_SUBTITLE,
   OUR_BEGINNING_TEXT,
+  OUR_CONTACT,
   RELIABLE_VALIDATOR,
   SUB_TITLE,
   TITLE,
@@ -14,7 +19,7 @@ import {
 } from '../../../data/home';
 import './style/style.scss';
 import TopBg from './images/top-bg.svg';
-//import FooterBg from './images/footer-bg.svg';
+import FooterBg from './images/footer-bg.svg';
 import WhatWeDoBg from './images/what-we-do-bg.svg';
 import Fade from 'react-reveal/Fade';
 import ProjectViewCard from '../../ProjectViewCard';
@@ -31,6 +36,8 @@ import BlogCard from '../../BlogCard';
 import {PostsContext} from '../../../context/postsContext';
 import {CALCULATOR_STROKE_TEXT, CALCULATOR_TITLE} from '../../../data/calculator';
 import Calculator from '../../Calculator';
+import Contacts from '../../Contacts';
+import ContactForm from '../../ContactForm';
 
 const Home = () => {
   const [isProjectWrapperOpen, setIsProjectOpen] = useState(false);
@@ -154,7 +161,8 @@ const Home = () => {
           : <Loader/>
         }
       </section>
-      {/*<section id="contact" className="container">
+      <section id="contact" className="container">
+        {!isMobile() && <img src={FooterBg} alt="footer background" className="contact-footer__background"/>}
         <div className="contact-header">
           <SubTitleBlock
             label={CONTACT}
@@ -162,11 +170,11 @@ const Home = () => {
             isBlueStick
           />
           {!isMobile() &&
-          <TextStroke
-            text={CONTACT_SUBTITLE}
-            className="right-up"
-            isNonCase
-          />
+            <TextStroke
+              text={CONTACT_SUBTITLE}
+              className="right-up"
+              isNonCase
+            />
           }
         </div>
         <div className="contact-form">
@@ -179,15 +187,14 @@ const Home = () => {
             Component={Contacts}
           />
           {!isMobile() &&
-          <TextStroke
-            text={CONTACTS_SUBTITLE}
-            className="right-center"
-            isNonCase
-          />
+            <TextStroke
+              text={CONTACTS_SUBTITLE}
+              className="right-center"
+              isNonCase
+            />
           }
         </div>
-        <img src={FooterBg} alt="footer background" className="contact-footer__background"/>
-      </section>*/}
+      </section>
     </>
   );
 };

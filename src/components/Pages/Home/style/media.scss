@@ -86,16 +86,34 @@
     margin-top: -50px;
   }
   #blog {
-    padding-bottom: 70px;
+    padding-bottom: 80px;
   }
   #blog .blog-header .blue-stick:before {
     height: 450px;
+  }
+  #calculator {
+    padding-bottom: 80px;
   }
   #calculator .calculator-header {
     padding-bottom: 0;
   }
   #calculator .calculator-header .blue-stick:before {
     height: 830px;
+  }
+  #contact .contact-form {
+    padding-bottom: 100px;
+  }
+  #contact .contact-header {
+    padding-bottom: 12px;
+  }
+  #contact .contact-header .blue-stick:before {
+    height: 310px;
+  }
+  #contact .contact-footer .blue-stick:before {
+    height: 200px;
+  }
+  #contact {
+    padding-bottom: 50px;
   }
 }
 

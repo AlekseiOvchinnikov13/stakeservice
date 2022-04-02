@@ -1,0 +1,33 @@
+@media (max-width: 950px) {
+  #write-to-us {
+    padding: 0 0 0 20px;
+  }
+  #write-to-us .form-text-input-wrapper {
+    flex-direction: column;
+  }
+  #write-to-us .form-text-input-wrapper #name,
+  #write-to-us .form-text-input-wrapper #email,
+  #write-to-us .form-text-input-wrapper .checkbox-label,
+  #write-to-us .submit-button {
+    width: 100%;
+  }
+  #write-to-us .form-text-input-wrapper #name,
+  #write-to-us .form-text-input-wrapper #email,
+  #write-to-us .submit-button {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  #write-to-us .form-text-input-wrapper #name,
+  #write-to-us .form-text-input-wrapper #email {
+    padding: 10px 14px;
+  }
+  #write-to-us .form-text-input-wrapper #name {
+    margin: 12px 0 12px;
+  }
+  #write-to-us .form-text-input-wrapper .checkbox-label {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 12px 0 24px;
+  }
+}
