@@ -1,7 +1,6 @@
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './components/Pages/Home';
-import Header from './components/Header';
 import {PostsContext} from './context/postsContext';
 import {useEffect, useLayoutEffect, useState} from 'react';
 import {getCoinsMarkets, getFeeds} from './api/api';
@@ -50,7 +49,7 @@ const App = () => {
       <CoinsContext.Provider value={coinList}>
         <BrowserRouter>
           <ScrollToTop/>
-          <Header/>
+          {/*<Header/>*/}
           <Switch>
 
             <Route path="/" component={Home}/>
