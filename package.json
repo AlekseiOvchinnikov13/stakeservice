@@ -6,7 +6,6 @@
     "@formspree/react": "^2.2.4",
     "axios": "^0.26.1",
     "classnames": "^2.3.1",
-    "date-fns": "^2.28.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "prop-types": "^15.8.1",

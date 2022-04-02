@@ -6,8 +6,8 @@ import {useEffect, useLayoutEffect, useState} from 'react';
 import {getCoinsMarkets, getFeeds} from './api/api';
 import {CoinsContext} from './context/CoinsContext';
 import {PRODUCT_CARDS_ARRAY} from './data/home';
-import Footer from './components/Footer';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 const App = () => {
   const [posts, setPosts] = useState();

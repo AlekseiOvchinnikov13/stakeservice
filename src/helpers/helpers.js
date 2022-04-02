@@ -1,6 +1,3 @@
-import {format} from 'date-fns';
-
-const DATE_FORMAT = 'dd.MM.yyyy';
 const MobileWidth = '950';
 
 /**
@@ -18,8 +15,17 @@ export const cleanText = text => {
  * @param date
  * @returns {string}
  */
-export const dateTimeToDateFormat = (date) =>
-  format(new Date(date), DATE_FORMAT);
+export const dateTimeToDateFormat = (date) => {
+  const tmpDate = new Date(date);
+
+  const day = tmpDate.getDay();
+  const dayLength = day.toString().length;
+  const month = tmpDate.getMonth();
+  const monthLength = month.toString().length;
+  const year = tmpDate.getFullYear();
+
+  return `${dayLength === 1 ? `0${day}` : day}.${monthLength === 1 ? `0${month}` : month}.${year}`;
+};
 
 /**
  * Get APY profit by coin name

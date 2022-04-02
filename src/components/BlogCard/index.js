@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
+import './style/style.scss';
 import Text from '../Text';
-import Tag from './-Tag';
 import {cleanText, dateTimeToDateFormat} from '../../helpers/helpers';
 import LinkArrow from '../LinkArrow';
-import './style/style.scss';
+import Tag from './-Tag';
 
 const BlogCard = (
   {
@@ -23,7 +23,7 @@ const BlogCard = (
       <div className="blog-card__text-block">
         <div className="row">
           {categories &&
-            <Tag key={categories[0]} className="blog-card-tag" label={categories[0]}/>
+            <Tag className="blog-card-tag" label={categories[0]}/>
           }
           <span className="blog-card__date">{dateTimeToDateFormat(pubDate)}</span>
         </div>

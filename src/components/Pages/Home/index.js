@@ -31,13 +31,13 @@ import ReadMore from '../../ReadMore';
 import {READ_MORE_TEXT_SEE_ALL_CLOSE, READ_MORE_TEXT_SEE_ALL_OPEN} from '../../../data/Common';
 import SubTitleBlock from '../../SubTitleBlock';
 import TextStroke from '../../TextStroke';
-import LinkArrow from '../../LinkArrow';
-import BlogCard from '../../BlogCard';
-import {PostsContext} from '../../../context/postsContext';
-import {CALCULATOR_STROKE_TEXT, CALCULATOR_TITLE} from '../../../data/calculator';
 import Calculator from '../../Calculator';
+import {CALCULATOR_STROKE_TEXT, CALCULATOR_TITLE} from '../../../data/calculator';
 import Contacts from '../../Contacts';
 import ContactForm from '../../ContactForm';
+import LinkArrow from '../../LinkArrow';
+import {PostsContext} from '../../../context/postsContext';
+import BlogCard from '../../BlogCard';
 
 const Home = () => {
   const [isProjectWrapperOpen, setIsProjectOpen] = useState(false);
@@ -114,7 +114,7 @@ const Home = () => {
           <SubTitleBlock
             title={OUR_BEGINNING_SUBTITLE}
             text={OUR_BEGINNING_TEXT}
-            className={!isMobile() && 'subtitle-block-right'}
+            className={!isMobile() ? 'subtitle-block-right' : ''}
             isBlueStick={isMobile()}
           />
         </div>
