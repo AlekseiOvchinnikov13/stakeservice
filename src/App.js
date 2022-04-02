@@ -7,6 +7,7 @@ import {getCoinsMarkets, getFeeds} from './api/api';
 import {CoinsContext} from './context/CoinsContext';
 import {PRODUCT_CARDS_ARRAY} from './data/home';
 import Footer from './components/Footer';
+import Header from './components/Header';
 
 const App = () => {
   const [posts, setPosts] = useState();
@@ -49,7 +50,7 @@ const App = () => {
       <CoinsContext.Provider value={coinList}>
         <BrowserRouter>
           <ScrollToTop/>
-          {/*<Header/>*/}
+          <Header/>
           <Switch>
 
             <Route path="/" component={Home}/>
