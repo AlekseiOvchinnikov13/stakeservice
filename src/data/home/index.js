@@ -17,9 +17,6 @@ export const OUR_BEGINNING_TEXT = 'Stake Service like many cryptocurrency projec
 export const WHAT_WE_DO = 'what we do';
 export const WHAT_WE_DO_TEXT = 'You can join the network by&nbsp;delegating your coins to&nbsp;our professional validators, not only supporting projects, but also earning from 5&nbsp;to&nbsp;50&nbsp;percent per annum! The percentage of&nbsp;the validator&rsquo;s commission is&nbsp;always minimal, which allows&nbsp;us to&nbsp;attract new stakeholders to&nbsp;support projects.';
 
-export const BLOG = 'blog';
-export const BLOG_SUBTITLE = 'read more';
-
 export const CONTACT = 'contact';
 export const CONTACT_TEXT = 'Write to us';
 export const CONTACT_SUBTITLE = 'You can trust us!';

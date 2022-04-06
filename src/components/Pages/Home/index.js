@@ -2,8 +2,6 @@ import {
   ABOUT_US,
   ABOUT_US_SUBTITLE,
   ABOUT_US_TEXT,
-  BLOG,
-  BLOG_SUBTITLE,
   CONTACT,
   CONTACT_SUBTITLE,
   CONTACT_TEXT,
@@ -28,7 +26,7 @@ import {useContext, useEffect, useState} from 'react';
 import {CoinsContext} from '../../../context/CoinsContext';
 import {isMobile, sliceArrayByCount} from '../../../helpers/helpers';
 import ReadMore from '../../ReadMore';
-import {READ_MORE_TEXT_SEE_ALL_CLOSE, READ_MORE_TEXT_SEE_ALL_OPEN} from '../../../data/Common';
+import {BLOG, BLOG_SUBTITLE, READ_MORE_TEXT_SEE_ALL_CLOSE, READ_MORE_TEXT_SEE_ALL_OPEN} from '../../../data/Common';
 import SubTitleBlock from '../../SubTitleBlock';
 import TextStroke from '../../TextStroke';
 import Calculator from '../../Calculator';

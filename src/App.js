@@ -8,6 +8,7 @@ import {CoinsContext} from './context/CoinsContext';
 import {PRODUCT_CARDS_ARRAY} from './data/home';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Blog from './components/Pages/Blog';
 
 const App = () => {
   const [posts, setPosts] = useState();
@@ -52,7 +53,7 @@ const App = () => {
           <ScrollToTop/>
           <Header/>
           <Switch>
-
+            <Route path="/blog" component={Blog}/>
             <Route path="/" component={Home}/>
           </Switch>
           <Footer/>

@@ -11,7 +11,7 @@
       margin: 0 30px;
 
       &__link {
-        color: inherit;
+        color: $FONT_LIGHT_GRAY_COLOR;
 
         &:hover, &:focus {
           color: $HIGH_FIDELITY_BLUE_COLOR;

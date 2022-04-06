@@ -1,0 +1,23 @@
+@import './src/assets/style/vars';
+
+.categories {
+  padding: 20px 24px;
+  margin-left: 26px;
+  margin-top: 60px;
+  border-radius: 16px;
+
+  max-width: 100%;
+  width: 100%;
+  min-height: 170px;
+  height: 100%;
+  box-shadow: 0 1.1966px 29.915px rgba(69, 42, 124, 0.1);
+  background: $HIGH_FIDELITY_WHITE_COLOR;
+  backdrop-filter: blur(40px);
+
+  p {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 50px;
+    color: $FONT_WHITE_COLOR;
+  }
+}

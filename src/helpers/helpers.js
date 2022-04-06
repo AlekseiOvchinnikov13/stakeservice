@@ -1,3 +1,6 @@
+import {useContext} from 'react';
+import {PostsContext} from '../context/postsContext';
+
 const MobileWidth = '950';
 
 /**
@@ -16,15 +19,9 @@ export const cleanText = text => {
  * @returns {string}
  */
 export const dateTimeToDateFormat = (date) => {
-  const tmpDate = new Date(date);
-
-  const day = tmpDate.getDay();
-  const dayLength = day.toString().length;
-  const month = tmpDate.getMonth();
-  const monthLength = month.toString().length;
-  const year = tmpDate.getFullYear();
-
-  return `${dayLength === 1 ? `0${day}` : day}.${monthLength === 1 ? `0${month}` : month}.${year}`;
+  let tmpDate = date.slice(0, date.indexOf(' '));
+  tmpDate = tmpDate.split('-').reverse().join('.');
+  return tmpDate;
 };
 
 /**
@@ -48,3 +45,12 @@ export const isMobile = () =>
  */
 export const sliceArrayByCount = (num, array) =>
   array.slice(0, num - array.length);
+
+export const getAllCategories = () => {
+  const posts = useContext(PostsContext);
+  const cats = posts && posts.reduce((acc, post) =>
+    acc.concat(post?.categories)
+  , []);
+
+  return Array.from(new Set(cats));
+};

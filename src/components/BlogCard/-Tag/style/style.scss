@@ -4,8 +4,9 @@
   font-weight: 500;
   font-family: $FONT_ROBOTO, sans-serif;
   line-height: 22px;
-  background: rgba(126, 209, 255, 0.16);
+  background: $TAG_BACKGROUND;
   border-radius: 4px;
+  color: $FONT_WHITE_COLOR;
 }
 
 .blog-card-tag {
@@ -15,4 +16,17 @@
 
 .categories-tag {
   font-size: 14px;
+}
+
+.tag-filter-button {
+  outline: none;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 4px 16px;
+  border: 1px solid transparent;
+  transition: all .3s ease-in-out;
+}
+
+.tag-filter-active {
+  border: 1px solid $HIGH_FIDELITY_BLUE_COLOR;
 }
