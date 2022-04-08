@@ -9,7 +9,7 @@ const ContactsRow = ({
 }) => {
 
   return (
-    <a href={href} className="contacts-links__item">
+    <a href={href} className="contacts-links__item" target="_blank" rel="noreferrer">
       <img src={img} alt={label}/>
       <span>{label}</span>
     </a>

@@ -1,6 +1,8 @@
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './components/Pages/Home';
+import Blog from './components/Pages/Blog';
+import ProjectsRouter from './components/Pages/ProjectsRouter';
 import {PostsContext} from './context/postsContext';
 import {useEffect, useLayoutEffect, useState} from 'react';
 import {getCoinsMarkets, getFeeds} from './api/api';
@@ -8,7 +10,7 @@ import {CoinsContext} from './context/CoinsContext';
 import {PRODUCT_CARDS_ARRAY} from './data/home';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Blog from './components/Pages/Blog';
+
 
 const App = () => {
   const [posts, setPosts] = useState();
@@ -53,6 +55,7 @@ const App = () => {
           <ScrollToTop/>
           <Header/>
           <Switch>
+            <Route path="/projects" component={ProjectsRouter}/>
             <Route path="/blog" component={Blog}/>
             <Route path="/" component={Home}/>
           </Switch>

@@ -6,7 +6,7 @@
   border-radius: 16px;
 
   background: $HIGH_FIDELITY_WHITE_COLOR;
-  box-shadow: 0 1.1966px 29.915px rgba(69, 42, 124, 0.9);
+  box-shadow: 0 1.1966px 29.915px $EARNING_CARD_BOX_SHADOW;
   backdrop-filter: blur(40px);
 
   display: flex;
@@ -33,7 +33,7 @@
 
   &__percent, &__soon {
     font-weight: 800;
-    font-family: $FONT_MONTSERRAT, sans-serif;
+    font-family: $FONT_MONTSERRAT;
     font-size: 24px;
     line-height: 32px;
     color: $HIGH_FIDELITY_BLUE_COLOR;
@@ -48,7 +48,7 @@
   }
 
   &__link {
-    font-family: $FONT_ROBOTO, sans-serif;
+    font-family: $FONT_ROBOTO;
     font-weight: 500;
     font-size: 15px;
     line-height: 22px;

@@ -11,8 +11,7 @@ const ProjectViewCard = ({
     isSoon,
     rewardText,
     exploreText,
-    isWithArrow,
-    link
+    id
   }
 }) => {
   return (
@@ -27,9 +26,9 @@ const ProjectViewCard = ({
       />}
       {!isSoon && <span className="project-view-card__reward">{rewardText}</span>}
       {isSoon && <p className="project-view-card__soon">soon</p>}
-      <NavLink to={link} className="project-view-card__link">
+      <NavLink to={`/projects/${id}`} className="project-view-card__link">
         {exploreText}
-        {isWithArrow && <img src={Arrow} alt="arrow"/>}
+        <img src={Arrow} alt="arrow"/>
       </NavLink>
     </div>
   );

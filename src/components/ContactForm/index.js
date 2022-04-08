@@ -6,7 +6,7 @@ import {
   INPUT_EMAIL_PLACEHOLDER,
   INPUT_NAME_PLACEHOLDER,
   TEXT_AFTER_SUBMIT
-} from '../../data/Form';
+} from '../../data/form';
 import './style/style.scss';
 import ArrowRight from '../Button/-ArrowRight';
 import Loader from '../Loader';

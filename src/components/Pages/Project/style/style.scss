@@ -1,0 +1,148 @@
+@import './src/assets/style/vars';
+
+.project-page {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  position: relative;
+
+  .project-page__top-background {
+    position: absolute;
+    right: 0;
+    top: -90px;
+    opacity: .4;
+    z-index: 0;
+  }
+
+  .project-page__header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 2;
+
+
+    .header__description-side, .header__stake-side {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
+
+    .header__description-side {
+      flex-direction: row;
+      align-items: flex-start;
+      max-width: 48%;
+      width: 100%;
+
+      img {
+        border-radius: 50%;
+        object-fit: contain;
+        width: 25%;
+      }
+
+      .header__text-block {
+        margin-left: 30px;
+
+        .text-block__title {
+          font-weight: 700;
+          font-size: 72px;
+          line-height: 98px;
+          color: $HIGH_FIDELITY_BLUE_COLOR;
+          text-transform: uppercase;
+        }
+
+        .text-block__paragraph {
+          font-family: $FONT_ROBOTO;
+          color: $FONT_DARK_GRAY_COLOR;
+          font-size: 16px;
+          line-height: 24px;
+          margin: 20px 0;
+
+          transition: all .3s ease-out;
+        }
+
+        .text-block__paragraph-hidden {
+          opacity: 0;
+          height: 0;
+          cursor: default;
+        }
+
+        .read-more-button {
+          text-align: left;
+          padding-top: 0;
+        }
+      }
+    }
+
+    .header__stake-side {
+      flex-direction: column;
+      align-items: center;
+
+      width: 30%;
+      min-height: 240px;
+      height: 100%;
+
+      .stake-side__top-info-block {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .top-info-block__item {
+          padding: 24px 28px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 45%;
+          border: 1px solid $HIGH_FIDELITY_PURPLE_COLOR;
+
+          backdrop-filter: blur(40px);
+          border-radius: 8px;
+          box-shadow: 0 1.1966px 29.915px $EARNING_CARD_BOX_SHADOW;
+          background-color: $HIGH_FIDELITY_WHITE_COLOR;
+
+          .top-info-block__active-text {
+            font-family: $FONT_MONTSERRAT;
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 32px;
+            color: $HIGH_FIDELITY_BLUE_COLOR;
+            margin-bottom: 10px;
+          }
+
+          .top-info-block__text {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 16px;
+            color: $WIREFRAME_WHITE_COLOR;
+          }
+        }
+      }
+
+      .stake-side__stake-button {
+        width: 100%;
+      }
+
+      .stake-side__bottom-info-block {
+        padding: 0 36px;
+        width: 100%;
+        font-family: $FONT_ROBOTO;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+        color: $FONT_DARK_GRAY_COLOR;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+
+}

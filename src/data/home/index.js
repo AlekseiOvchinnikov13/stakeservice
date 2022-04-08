@@ -49,8 +49,6 @@ export const PRODUCT_CARDS_ARRAY = [
     isSoon: false,
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
-    isWithArrow: true,
-    link: '#',
     percentNumber: 5.87
   },
   {
@@ -59,8 +57,6 @@ export const PRODUCT_CARDS_ARRAY = [
     isSoon: false,
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
-    isWithArrow: true,
-    link: '#',
     percentNumber: 2.45
   },
   {
@@ -69,8 +65,6 @@ export const PRODUCT_CARDS_ARRAY = [
     isSoon: false,
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
-    isWithArrow: true,
-    link: '#',
     percentNumber: 10
   },
   {
@@ -79,8 +73,6 @@ export const PRODUCT_CARDS_ARRAY = [
     isSoon: false,
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
-    isWithArrow: true,
-    link: '#',
     percentNumber: 10.2
   },
   {
@@ -89,8 +81,6 @@ export const PRODUCT_CARDS_ARRAY = [
     isSoon: false,
     rewardText: 'Nominal Reward (soon)',
     exploreText: 'Explore',
-    isWithArrow: true,
-    link: '#',
     percentNumber: 1
   },
   {
@@ -99,8 +89,6 @@ export const PRODUCT_CARDS_ARRAY = [
     isSoon: false,
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
-    isWithArrow: true,
-    link: '#',
     percentNumber: 29.03
   },
   {
@@ -109,8 +97,6 @@ export const PRODUCT_CARDS_ARRAY = [
     isSoon: false,
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
-    isWithArrow: true,
-    link: '#',
     percentNumber: 28.49
   },
   {
@@ -119,8 +105,6 @@ export const PRODUCT_CARDS_ARRAY = [
     isSoon: false,
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
-    isWithArrow: true,
-    link: '#',
     percentNumber: 1.2
   },
   {
@@ -130,8 +114,6 @@ export const PRODUCT_CARDS_ARRAY = [
     isSoon: true,
     rewardText: '',
     exploreText: 'Explore',
-    isWithArrow: true,
-    link: '#',
     coin: 'coho',
     coinName: 'Cosmic Horizon',
     percentNumber: 1.3
@@ -142,8 +124,6 @@ export const PRODUCT_CARDS_ARRAY = [
     isSoon: false,
     rewardText: 'Nominal Reward APY',
     exploreText: 'Explore',
-    isWithArrow: true,
-    link: '#',
     percentNumber: 1
   }
 ];

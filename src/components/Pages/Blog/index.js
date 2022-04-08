@@ -1,6 +1,6 @@
 import './style/style.scss';
 import TextStroke from '../../TextStroke';
-import {BLOG, BLOG_SUBTITLE} from '../../../data/Common';
+import {BLOG, BLOG_SUBTITLE} from '../../../data/common';
 import topBg from './images/blog-top-bg.svg';
 import SubTitleBlock from '../../SubTitleBlock';
 import Categories from '../../Categories';

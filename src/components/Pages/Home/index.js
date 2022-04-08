@@ -26,7 +26,7 @@ import {useContext, useEffect, useState} from 'react';
 import {CoinsContext} from '../../../context/CoinsContext';
 import {isMobile, sliceArrayByCount} from '../../../helpers/helpers';
 import ReadMore from '../../ReadMore';
-import {BLOG, BLOG_SUBTITLE, READ_MORE_TEXT_SEE_ALL_CLOSE, READ_MORE_TEXT_SEE_ALL_OPEN} from '../../../data/Common';
+import {BLOG, BLOG_SUBTITLE, READ_MORE_TEXT_SEE_ALL_CLOSE, READ_MORE_TEXT_SEE_ALL_OPEN} from '../../../data/common';
 import SubTitleBlock from '../../SubTitleBlock';
 import TextStroke from '../../TextStroke';
 import Calculator from '../../Calculator';
