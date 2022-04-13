@@ -11,7 +11,6 @@ import {PRODUCT_CARDS_ARRAY} from './data/home';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-
 const App = () => {
   const [posts, setPosts] = useState();
   const [coinList, setCoinList] = useState([]);
@@ -26,7 +25,8 @@ const App = () => {
   }, []);
 
   const getCoins = async () => {
-    const data = await getCoinsMarkets();
+    const projectsIds = PRODUCT_CARDS_ARRAY.reduce((acc, item) => acc.concat(item.id), []);
+    const data = await getCoinsMarkets(projectsIds);
     const arr = PRODUCT_CARDS_ARRAY.reduce((acc, item) => {
       const {
         id,
@@ -43,8 +43,13 @@ const App = () => {
     setCoinList(arr);
   };
 
+  const getMediumPosts = async () => {
+    const mediumPosts = await getFeeds();
+    setPosts(mediumPosts);
+  };
+
   useEffect(async () => {
-    setPosts(await getFeeds());
+    await getMediumPosts();
     await getCoins();
   }, []);
 

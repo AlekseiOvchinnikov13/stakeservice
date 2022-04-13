@@ -1,3 +1,6 @@
+import IntroImg from './images/intro.png';
+import StakeImg from './images/stake.png';
+
 export const ProjectsData = [
   {
     projectId: 'solana',
@@ -6,20 +9,31 @@ export const ProjectsData = [
       description2: 'Solana solves one of&nbsp;the main problems-slow transactions and high costs (which are found in&nbsp;layer-1&nbsp;analogues, for example, Bitcoin and Ethereum). Solana is&nbsp;capable of&nbsp;processing about 50,000 transactions per second. Also an&nbsp;important area of&nbsp;activity of&nbsp;the Solana Foundation is&nbsp;to&nbsp;ensure greater access to&nbsp;decentralized finance.',
       stakingCommissionTitle: 'Staking Commission',
       stakingCommissionValue: '10&nbsp;%',
-      protocolCategoryTitle: 'Protocol Category',
       totalStakeTitle: 'Our Total Stake:',
       totalStakeValue: '206448',
       delegatorsTitle: 'Delegators:',
       delegatorsValue: '484',
-      protocolCategoryValue: 'Layer 1',
-      stakingTypeTitle: 'Staking Type',
-      stakingTypeValue: 'PoH',
-      governanceTitle: 'Governance',
-      governanceValue: 'Validator vote',
-      validatorAddressTitle: 'Validator Address',
-      validatorAddressValue: '4dmBLJcchyfucSxkVmrymmsnVpZm3rBkp7kbF7qHTTYW',
+      basicInfoList: [
+        {
+          title: 'Protocol Category',
+          value: 'Layer 1'
+        },
+        {
+          title: 'Staking Type',
+          value: 'PoH'
+        },
+        {
+          title: 'Governance',
+          value: 'Validator vote'
+        },
+        {
+          title: 'Validator Address',
+          value: '4dmBLJcchyfucSxkVmrymmsnVpZm3rBkp7kbF7qHTTYW',
+          isAddress: true
+        }
+      ],
       stakingTutorialTitle: 'SOLANA STAKING TUTORIAL',
-      stakingTutorialSubTitle: 'Your SOLs must be&nbsp;in&nbsp;a&nbsp;wallet or&nbsp;custodial account in&nbsp;order to&nbsp;use our staking services.',
+      stakingTutorialSubTitle: 'Your SOLs must be in a wallet or custodial account in order to use our staking services.',
       articleLinks: [
         {
           articleTitle: 'INTRODUCTORY ARTICLE',
@@ -27,7 +41,8 @@ export const ProjectsData = [
           siteLink: 'https://medium.com/stake-service',
           siteText: 'medium.com',
           sourceLink: 'https://medium.com/stake-service/introduction-to-solana-f35e23a25a61',
-          sourceText: 'See Explained'
+          sourceText: 'See Explained',
+          img: IntroImg
         },
         {
           articleTitle: 'HOW TO STAKE SOLANA',
@@ -36,12 +51,14 @@ export const ProjectsData = [
           siteLink: 'https://medium.com/stake-service',
           siteText: 'medium.com',
           sourceLink: 'https://medium.com/stake-service/how-to-stake-solana-tokens-7a6542fe4ec8',
-          sourceText: 'See Explained'
+          sourceText: 'See Explained',
+          img: StakeImg
         }
       ],
       stakingMechanicsTitle: 'SOLANA STAKING MECHANICS',
 
-
+      rewardsCalculatorTitle: 'SOLANA REWARDS CALCULATOR',
+      rewardsCalculatorSubTitle: 'How many dollars do you want to put in for solana?',
     }
   },
   {

@@ -1,0 +1,102 @@
+@import './src/assets/style/vars';
+
+.card-info__item {
+  border: 1px solid $HIGH_FIDELITY_PURPLE_COLOR;
+  backdrop-filter: blur(40px);
+  border-radius: 8px;
+  box-shadow: 0 1.1966px 29.915px $EARNING_CARD_BOX_SHADOW;
+  background-color: $HIGH_FIDELITY_WHITE_COLOR;
+
+  padding: 24px 28px;
+  width: 18%;
+  min-width: 210px;
+  height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .card-info__active-text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: $HIGH_FIDELITY_BLUE_COLOR;
+    margin-bottom: 10px;
+  }
+
+  .card-info__text {
+    font-family: $FONT_ROBOTO;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: $WIREFRAME_WHITE_COLOR;
+  }
+}
+
+.card-info__item-address {
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 38%;
+
+  .card-info__active-text {
+    font-family: $FONT_ROBOTO;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: $WIREFRAME_WHITE_COLOR;
+    margin-bottom: 0;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 12px 0 12px 12px;
+    border: 1px solid $FOOTER_COLOR;
+    border-radius: 4px;
+
+    button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      border: none;
+      background-color: $HIGH_FIDELITY_BLUE_COLOR;
+      text-transform: uppercase;
+      font-family: $FONT_ROBOTO;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 22px;
+      padding: 0 19px;
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+  .card-info__text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: $HIGH_FIDELITY_BLUE_COLOR;
+
+    word-break: break-word;
+    width: 100px;
+  }
+}
+
+.mechanics-info__item {
+  align-items: center;
+  padding: 32px 50px;
+  margin-bottom: 30px;
+
+  .card-info__active-text {
+    font-family: $FONT_MONTSERRAT;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .card-info__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: capitalize;
+  }
+}

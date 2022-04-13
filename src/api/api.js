@@ -1,8 +1,7 @@
 import axios from 'axios';
 
-const nameMedium = 'stake-service';
-
 export const getFeeds = () => {
+  const nameMedium = 'stake-service';
   const url = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/${nameMedium}`;
 
   return axios.get(url)
@@ -10,8 +9,16 @@ export const getFeeds = () => {
     .catch(() => []);
 };
 
-export const getCoinsMarkets = () => {
-  const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=solana%2Cthe-graph%2Ccelo%2Coasis-network%2Cagoric%2Cregen%2Csentinel%2Ccentrifuge%2Cdock&order=market_cap_desc&per_page=100&page=1&sparkline=false';
+export const getCoinsMarkets = ids => {
+  const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${ids.map(item => item)}&order=market_cap_desc&per_page=100&page=1&sparkline=false`;
+
+  return axios.get(url)
+    .then(res => res.data)
+    .catch(() => []);
+};
+
+export const getCoinInfo = coinId => {
+  const url = `https://api.coingecko.com/api/v3/coins/${coinId}?localization=false&tickers=false`;
 
   return axios.get(url)
     .then(res => res.data)

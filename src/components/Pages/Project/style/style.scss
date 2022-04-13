@@ -36,10 +36,18 @@
       max-width: 48%;
       width: 100%;
 
-      img {
+      a {
         border-radius: 50%;
-        object-fit: contain;
-        width: 25%;
+        width: 100%;
+        transition: all .3s ease-in-out;
+
+        &:hover, &:focus {
+          transform: scale(1.05);
+        }
+
+        img {
+          border-radius: 50%;
+        }
       }
 
       .header__text-block {
@@ -145,4 +153,39 @@
     }
   }
 
+  .project-page__basic-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 100px;
+  }
+
+  .project-page__tutorial {
+
+    .tutorial__article-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 40px 0;
+    }
+  }
+
+  .project-page__mechanics {
+    .mechanics__info-card-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+.project-page-section-padding {
+  padding: 50px 0;
 }

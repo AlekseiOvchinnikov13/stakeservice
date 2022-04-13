@@ -54,3 +54,24 @@ export const getAllCategories = () => {
 
   return Array.from(new Set(cats));
 };
+
+/**
+ * Получить только главные метрики по криптовалюте
+ * @param data Все метрики по криптовалюте
+ * @returns {{'coingecko rank': *, 'market_cap rank': *, 'coingecko score': *, 'liquidity score': *, ath: (boolean|*), 'current price': (boolean|*), atl: (boolean|*), 'community score': *, 'developer score': *, 'total supply': *, homepage: *}}
+ */
+export const getMainDataByCoinInfo = data => {
+  return {
+    'coingecko rank': data.coingecko_rank,
+    'coingecko score': data.coingecko_score,
+    'community score': data.community_score,
+    'developer score': data.developer_score,
+    'liquidity score': data.liquidity_score,
+    'market cap rank': data.market_cap_rank,
+    'homepage': data.links?.homepage?.filter(link => link.length > 0)[0],
+    'ath': data.market_data?.ath?.usd,
+    'atl': data.market_data?.atl?.usd,
+    'current price': data.market_data?.current_price?.usd,
+    'total supply': data.market_data?.total_supply,
+  };
+};
