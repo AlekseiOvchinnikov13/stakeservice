@@ -55,6 +55,11 @@
       font-size: 18px;
       line-height: 30px;
       color: $FONT_LIGHT_GRAY_COLOR;
+
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      display: -webkit-box;
     }
 
     .article-card__source {
@@ -95,3 +100,5 @@
     }
   }
 }
+
+@import './media';

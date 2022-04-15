@@ -160,6 +160,10 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 100px;
+
+    .Toastify {
+      position: absolute;
+    }
   }
 
   .project-page__tutorial {
@@ -182,6 +186,14 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
+      margin-top: 40px;
+      position: relative;
+    }
+  }
+
+  .project-page__calculator {
+    .calculator {
+      padding-top: 40px;
     }
   }
 }
@@ -189,3 +201,5 @@
 .project-page-section-padding {
   padding: 50px 0;
 }
+
+@import './media';

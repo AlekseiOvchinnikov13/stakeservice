@@ -2,6 +2,9 @@
   .calculator .currency-inputs-block {
     width: 65%;
   }
+  .calculator-project .currency-inputs-block {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -25,18 +28,18 @@
     height: unset;
     padding: 24px 0 24px 24px;
   }
-  .currency-block {
+  .currency-block-wrapper {
     width: 100%;
     height: 80px;
-
+    margin-bottom: 24px;
+  }
+  .currency-block {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
     border-radius: 4px;
-
-    margin-bottom: 24px;
   }
   .currency-block .color-block {
     width: 50%;
@@ -90,6 +93,24 @@
     font-size: 15px;
     line-height: 22px;
   }
+  .calculator-project .currency-block-wrapper {
+    width: 100%;
+    margin-left: 0;
+    flex-direction: column-reverse;
+  }
+  .calculator-project .currency-block,
+  .calculator-project .stake-button {
+    height: 56px;
+  }
+  .calculator-project .stake-button {
+    border-radius: 4px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .calculator-project .currency-block {
+    margin-bottom: 0;
+    margin-top: 24px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -104,5 +125,16 @@
   }
   .crypto-currency .select-currency-wrapper {
     left: 0;
+  }
+  .crypto-currency-project .button-selector-currency {
+    justify-content: center;
+  }
+  .calculator-project .currency-block .crypto-currency-project {
+    padding-left: 0;
+    justify-content: center;
+  }
+  .calculator-project .currency-block {
+    height: unset;
+    min-height: 56px;
   }
 }

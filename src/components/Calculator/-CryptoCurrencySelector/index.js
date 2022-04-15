@@ -13,13 +13,15 @@ const CryptoCurrencySelector = ({
     coinName,
     coin
   },
-  isCryptoActive
+  isCryptoActive,
+  projectId
 }) => {
 
   const cryptoCurrencyClasses = classNames(
     'crypto-currency',
     {'crypto-currency-active': isCryptoActive},
-    {'crypto-currency-open-selector': isOpenSelect}
+    {'crypto-currency-open-selector': isOpenSelect},
+    {'crypto-currency-project': projectId}
   );
 
   const cryptoCurrencyNameClasses = classNames(
@@ -41,14 +43,17 @@ const CryptoCurrencySelector = ({
     <div className={cryptoCurrencyClasses}>
       <button
         className="button-selector-currency"
-        onClick={onClickArrowSelect}
+        onClick={projectId
+          ? () => null
+          : onClickArrowSelect}
       >
         <span className={cryptoCurrencyNameClasses}>
           {`${coinName} (${coin.toUpperCase()})`}
         </span>
-        <span className="arrow-down">
-          <ArrowDown/>
-        </span>
+        {!projectId &&
+          <span className="arrow-down">
+            <ArrowDown/>
+          </span>}
       </button>
       <div className={selectWrapperClasses}>
         <Scrollbar style={scrollBarStyles}>
@@ -66,7 +71,8 @@ CryptoCurrencySelector.propTypes = {
   onClickArrowSelect: PropTypes.func,
   onClickSelectCurrency: PropTypes.func,
   selectedCurrency: PropTypes.object,
-  isCryptoActive: PropTypes.bool
+  isCryptoActive: PropTypes.bool,
+  projectId: PropTypes.string
 };
 
 export default CryptoCurrencySelector;

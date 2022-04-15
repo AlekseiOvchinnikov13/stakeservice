@@ -28,6 +28,62 @@
   }
 }
 
+.calculator-project {
+  flex-direction: row-reverse;
+  align-items: flex-start;
+
+  .currency-block-wrapper {
+    width: 60%;
+    height: 100%;
+    margin-left: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .stake-button {
+    height: 94px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 50px;
+    font-family: $FONT_RALEWAY;
+    border-radius: 8px;
+  }
+
+  .currency-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+    height: 94px;
+
+    margin-bottom: 24px;
+  }
+
+  .currency-block .color-block {
+    width: 50%;
+    height: 100%;
+    top: 0;
+    border-radius: 4px;
+    left: unset;
+  }
+
+  .currency-block .color-block-up {
+    animation: blockLeft .3s ease-in-out forwards;
+  }
+
+  .currency-block .color-block-down {
+    animation: blockRight 0.3s ease-in-out forwards;
+  }
+
+  .currency-inputs-block {
+    width: 100%;
+  }
+}
+
 .earning-block {
   width: 100%;
 }

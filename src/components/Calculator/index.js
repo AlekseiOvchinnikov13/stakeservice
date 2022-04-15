@@ -3,15 +3,19 @@ import {useContext, useEffect, useState} from 'react';
 import CurrencyInput from './-CurrencyInput';
 import {CALCULATOR_DOLLAR_SYMBOL, EARNING_CARDS_DATA} from '../../data/calculator';
 import {CoinsContext} from '../../context/CoinsContext';
-import './style/style.scss';
 import EarningCard from './-Earning-card';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import Button from '../Button/Button';
+import './style/style.scss';
 
-const Calculator = () => {
+const Calculator = ({projectId}) => {
   const coins = useContext(CoinsContext);
-  const [selectedCurrency, setSelectedCurrency] = useState(coins[0]);
+  const [selectedCurrency, setSelectedCurrency] = useState(projectId ? coins.filter(coin => coin.id === projectId)[0] : coins[0]);
   const [activeCurrency, setActiveCurrency] = useState({crypto: true, usd: false});
   const [cryptoValue, setCryptoValue] = useState(1);
   const [usdValue, setUsdValue] = useState(1);
+  const classes = classNames('calculator', {'calculator-project': projectId});
 
   const onChangeInputValue = val => {
     if (activeCurrency.crypto) {
@@ -35,13 +39,24 @@ const Calculator = () => {
 
   return (
     <>
-      <div className="calculator">
-        <CurrencySelector
-          selectedCurrency={selectedCurrency}
-          setSelectedCurrency={setSelectedCurrency}
-          activeCurrency={activeCurrency}
-          setActiveCurrency={setActiveCurrency}
-        />
+      <div className={classes}>
+        <div className="currency-block-wrapper">
+          <CurrencySelector
+            projectId={projectId}
+            selectedCurrency={selectedCurrency}
+            setSelectedCurrency={setSelectedCurrency}
+            activeCurrency={activeCurrency}
+            setActiveCurrency={setActiveCurrency}
+          />
+          {projectId &&
+            <Button
+              label={'Stake Now'}
+              onClick={() => {
+              }}
+              className={'stake-button'}
+            />
+          }
+        </div>
         <div className="currency-inputs-block">
           <CurrencyInput
             className="crypto-input"
@@ -73,6 +88,10 @@ const Calculator = () => {
       </div>
     </>
   );
+};
+
+Calculator.propTypes = {
+  projectId: PropTypes.string
 };
 
 export default Calculator;

@@ -1,0 +1,109 @@
+@media (max-width: 1440px) {
+  .project-page .project-page__header .header__stake-side .stake-side__bottom-info-block {
+    padding: 0;
+  }
+  .project-page .project-page__header .header__stake-side .stake-side__top-info-block .top-info-block__item {
+    padding: 15px 19px;
+    width: 47%;
+  }
+  .project-page .project-page__header .header__stake-side {
+    width: 40%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .project-page .project-page__header .header__description-side a img {
+    width: 100%;
+  }
+  .project-page .project-page__header .header__description-side {
+    max-width: 55%;
+  }
+  .project-page .project-page__basic-info {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1024px) {
+  .project-page .project-page__header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-page .project-page__header .header__description-side,
+  .project-page .project-page__header .header__stake-side {
+    max-width: unset;
+    width: 100%;
+  }
+  .project-page .project-page__header .header__stake-side {
+    margin-top: 40px;
+  }
+  .project-page .project-page__header .header__description-side {
+    flex-direction: column;
+  }
+  .project-page .project-page__header .header__description-side a {
+    width: 20%;
+  }
+  .project-page .project-page__header .header__description-side .header__text-block {
+    margin-left: 0;
+  }
+  .project-page .project-page__top-background {
+    width: 100%;
+  }
+  .project-page-section-padding {
+    padding: 25px 0;
+  }
+}
+
+@media (max-width: 950px) {
+  .mechanics-info__see-all {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .project-page .project-page__mechanics .mechanics__info-card-wrapper {
+    padding-bottom: 10px;
+  }
+  .project-page .project-page__calculator .calculator,
+  .project-page .project-page__calculator .earning-block {
+    padding: 24px 0;
+  }
+  .project-page {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-page .project-page__header .header__description-side .header__text-block .text-block__title {
+    font-size: 48px;
+    line-height: 64px;
+  }
+  .project-page .project-page__header .header__description-side .header__text-block .text-block__paragraph {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 15px 0;
+  }
+  .project-page .project-page__header .header__stake-side .stake-side__top-info-block .top-info-block__item .top-info-block__active-text {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .project-page .project-page__header .header__stake-side .stake-side__stake-button {
+    font-size: 16px;
+    line-height: 29px;
+  }
+}
+
+@media (max-width: 400px) {
+  .project-page .project-page__header .header__stake-side .stake-side__top-info-block .top-info-block__item {
+    min-height: 110px;
+  }
+}
+
+@media (max-width: 320px) {
+  .project-page .project-page__header .header__stake-side .stake-side__top-info-block .top-info-block__item .top-info-block__active-text {
+    font-size: 25px;
+  }
+  .project-page .project-page__header .header__stake-side .stake-side__top-info-block .top-info-block__item .top-info-block__text {
+    font-size: 10px;
+  }
+}
+

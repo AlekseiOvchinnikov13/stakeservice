@@ -1,7 +1,11 @@
 @import './src/assets/style/vars';
 
-.currency-block {
+.currency-block-wrapper {
   width: 340px;
+  height: 100%;
+}
+
+.currency-block {
   height: 100%;
   border-radius: 16px;
   background-color: $HIGH_FIDELITY_PURPLE_COLOR;

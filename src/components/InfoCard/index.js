@@ -31,7 +31,7 @@ const InfoCard = ({
       {isAddress && <Toast/>}
       <div className={classes}>
         <span className="card-info__active-text">
-          {value}{isAddress && <button onClick={copyToClipBoard}>copy</button>}
+          {value ? value : '-'}{isAddress && <button onClick={copyToClipBoard}>copy</button>}
         </span>
         <span className="card-info__text">{title}</span>
       </div>

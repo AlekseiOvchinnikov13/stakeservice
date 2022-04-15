@@ -5,6 +5,7 @@
   font-size: 36px;
   line-height: 44px;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .page-section-subtitle {
@@ -17,4 +18,21 @@
 .page-section-title, .page-section-subtitle {
   color: $FONT_LIGHT_GRAY_COLOR;
   text-align: center;
+}
+
+@media (max-width: 780px) {
+  .page-section-title, .page-section-subtitle {
+    text-align: left;
+  }
+  .page-section-subtitle {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 450px) {
+  .page-section-title {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }

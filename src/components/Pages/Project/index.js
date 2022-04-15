@@ -6,14 +6,14 @@ import {CoinsContext} from '../../../context/CoinsContext';
 import Button from '../../Button/Button';
 import Loader from '../../Loader';
 import TopBg from './images/project-bg.svg';
-import './style/style.scss';
 import ReadMore from '../../ReadMore';
 import InfoCard from '../../InfoCard';
 import ArticleCard from '../../ArticleCard';
 import SectionTitles from '../../SectionTitles';
 import {getCoinInfo} from '../../../api/api';
 import Calculator from '../../Calculator';
-import {getMainDataByCoinInfo} from '../../../helpers/helpers';
+import {getMainDataByCoinInfo, isMobile, sliceArrayByCount} from '../../../helpers/helpers';
+import './style/style.scss';
 
 const Project = () => {
   const {projectId} = useParams();
@@ -23,18 +23,33 @@ const Project = () => {
   const coinsData = coins.filter(el => el.id === projectId)[0];
   const classes = classNames({[`project-page-${projectId}`]: projectId});
 
+  const [mechanicsList, setMechanicsList] = useState([]);
   const [coinInfo, setCoinInfo] = useState({});
-  const [isReadMoreOpen, setIsReadMoreOpen] = useState(false);
+  const [isParagraphOpen, setParagraphOpen] = useState(false);
+  const [isMechanicsOpen, setMechanicsOpen] = useState(false);
   const paragraphReadMoreRef = useRef(null);
-  const readMoreClickHandle = () => {
-    setIsReadMoreOpen(!isReadMoreOpen);
+
+  const paragraphReadMoreClickHandle = () => {
+    setParagraphOpen(!isParagraphOpen);
     paragraphReadMoreRef && paragraphReadMoreRef.current.classList.toggle('text-block__paragraph-hidden');
+  };
+  const mechanicsReadMoreClickHandle = () => {
+    setMechanicsOpen(!isMechanicsOpen);
   };
 
   useEffect(async () => {
     const tmpData = await getCoinInfo(projectId);
     setCoinInfo(getMainDataByCoinInfo(tmpData));
   }, [projectId]);
+
+  useEffect(() => {
+    const list = Object.entries(coinInfo).filter(el => el[0] !== 'homepage');
+    isMobile()
+      ? isMechanicsOpen
+        ? setMechanicsList(list)
+        : setMechanicsList(sliceArrayByCount(4, list))
+      : setMechanicsList(list);
+  }, [isMobile(), coinInfo, isMechanicsOpen]);
 
   if (!projectData || !coinsData) return <Loader/>;
 
@@ -55,17 +70,20 @@ const Project = () => {
                   __html: projectData.description1
                 }}
               />
-              <p
-                ref={paragraphReadMoreRef}
-                className="text-block__paragraph text-block__paragraph-hidden"
-                dangerouslySetInnerHTML={{
-                  __html: projectData.description2
-                }}
-              />
-              <ReadMore
-                isOpen={isReadMoreOpen}
-                onClick={readMoreClickHandle}
-              />
+              {projectData.description2 &&
+                <>
+                  <p
+                    ref={paragraphReadMoreRef}
+                    className="text-block__paragraph text-block__paragraph-hidden"
+                    dangerouslySetInnerHTML={{
+                      __html: projectData.description2
+                    }}
+                  />
+                  <ReadMore
+                    isOpen={isParagraphOpen}
+                    onClick={paragraphReadMoreClickHandle}
+                  />
+                </>}
             </div>
           </div>
           <div className="header__stake-side">
@@ -98,7 +116,7 @@ const Project = () => {
                 {projectData.totalStakeTitle} {projectData.totalStakeValue}
               </span>
               <span className="bottom-info-block__text">
-                {projectData.delegatorsTitle} {projectData.delegatorsValue}
+                {projectData.delegatorsTitle} {projectData.delegatorsValue ? projectData.delegatorsValue : '-'}
               </span>
             </div>
           </div>
@@ -116,7 +134,7 @@ const Project = () => {
         </div>
         <div className="project-page__tutorial project-page-section-padding">
           <SectionTitles
-            title={projectData.stakingTutorialTitle}
+            title={`${coinsData.coinName} ${projectData.stakingTutorialTitle}`}
             subtitle={projectData.stakingTutorialSubTitle}
             classNameTitle="tutorial__title"
             classNameSubtitle="tutorial__subtitle"
@@ -125,7 +143,7 @@ const Project = () => {
             {projectData.articleLinks?.map(article =>
               <ArticleCard
                 data={article}
-                key={article.postTitle}
+                key={`${article.postTitle}${coinsData.coinName}`}
                 coinName={coinsData.coinName}
               />
             )}
@@ -133,30 +151,35 @@ const Project = () => {
         </div>
         <div className="project-page__mechanics project-page-section-padding">
           <SectionTitles
-            title={projectData.stakingMechanicsTitle}
+            title={`${coinsData.coinName} ${projectData.stakingMechanicsTitle}`}
             classNameTitle="mechanics__title"
           />
           <div className="mechanics__info-card-wrapper">
-            {Object.entries(coinInfo)
-              .filter(el => el[0] !== 'homepage')
-              .map(info =>
-                <InfoCard
-                  title={info[0]}
-                  value={info[1]}
-                  key={info[0]}
-                  className="mechanics-info__item"
-                />
-              )}
+            {mechanicsList && mechanicsList.map(info =>
+              <InfoCard
+                title={info[0]}
+                value={info[1]}
+                key={info[0]}
+                className="mechanics-info__item"
+              />
+            )}
+            {isMobile() &&
+              <ReadMore
+                isOpen={isMechanicsOpen}
+                onClick={mechanicsReadMoreClickHandle}
+                className="mechanics-info__see-all"
+              />
+            }
           </div>
         </div>
         <div className="project-page__calculator project-page-section-padding">
           <SectionTitles
-            title={projectData.rewardsCalculatorTitle}
+            title={`${coinsData.coinName} ${projectData.rewardsCalculatorTitle}`}
             classNameTitle="calculator__title"
-            subtitle={projectData.rewardsCalculatorSubTitle}
+            subtitle={`${projectData.rewardsCalculatorSubTitle} ${coinsData.coinName.toLowerCase()}?`}
             classNameSubtitle="calculator__subtitle"
           />
-          <Calculator />
+          <Calculator projectId={projectId}/>
         </div>
       </div>
     </div>

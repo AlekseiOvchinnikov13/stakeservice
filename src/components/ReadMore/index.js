@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import './style.scss';
 import classNames from 'classnames';
 import {READ_MORE_TEXT_DEFAULT_CLOSE, READ_MORE_TEXT_DEFAULT_OPEN} from '../../data/common';
+import './style.scss';
 
 const ReadMore = ({onClick, textOpen, textClose, isOpen}) => {
   const classes = classNames(

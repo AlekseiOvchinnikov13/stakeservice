@@ -46,6 +46,10 @@ export const isMobile = () =>
 export const sliceArrayByCount = (num, array) =>
   array.slice(0, num - array.length);
 
+/**
+ * Get all exist posts categories
+ * @returns {any[]}
+ */
 export const getAllCategories = () => {
   const posts = useContext(PostsContext);
   const cats = posts && posts.reduce((acc, post) =>
@@ -59,15 +63,16 @@ export const getAllCategories = () => {
  * Получить только главные метрики по криптовалюте
  * @param data Все метрики по криптовалюте
  * @returns {{'coingecko rank': *, 'market_cap rank': *, 'coingecko score': *, 'liquidity score': *, ath: (boolean|*), 'current price': (boolean|*), atl: (boolean|*), 'community score': *, 'developer score': *, 'total supply': *, homepage: *}}
+ * @param {*} data
  */
-export const getMainDataByCoinInfo = data => {
+export const getMainDataByCoinInfo = (data) => {
   return {
-    'coingecko rank': data.coingecko_rank,
+    'market cap rank': data.market_cap_rank,
     'coingecko score': data.coingecko_score,
     'community score': data.community_score,
     'developer score': data.developer_score,
     'liquidity score': data.liquidity_score,
-    'market cap rank': data.market_cap_rank,
+    'alexa rank': data.public_interest_stats?.alexa_rank,
     'homepage': data.links?.homepage?.filter(link => link.length > 0)[0],
     'ath': data.market_data?.ath?.usd,
     'atl': data.market_data?.atl?.usd,

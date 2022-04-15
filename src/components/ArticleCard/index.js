@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import './style/style.scss';
 import Arrow from './images/arrow-right.svg';
+import './style/style.scss';
 
 const ArticleCard = ({
   data: {

@@ -12,7 +12,8 @@ const CurrencySelector = ({
     crypto,
     usd
   },
-  setActiveCurrency
+  setActiveCurrency,
+  projectId
 }) => {
 
   const [isSpin, setIsSpin] = useState(false);
@@ -25,6 +26,7 @@ const CurrencySelector = ({
     setColorBlockClasses(`color-block ${usd ? 'color-block-down' : 'color-block-up'}${isOpenSelect ? ' color-block-without-border-radius' : ''}`);
     setUsdCurrencyNameClasses(`currency-name usd-currency-name${usd ? ' currency-name-active' : ''}`);
   }, [usd, isOpenSelect]);
+
 
   const onClickSelectCurrency = obj => {
     setSelectedCurrency(obj);
@@ -50,6 +52,7 @@ const CurrencySelector = ({
         selectedCurrency={selectedCurrency}
         isCryptoActive={crypto}
         isUsdActive={usd}
+        projectId={projectId}
       />
       <ToggleButton
         isSpin={isSpin}
@@ -70,7 +73,8 @@ CurrencySelector.propTypes = {
   selectedCurrency: PropTypes.object,
   setSelectedCurrency: PropTypes.func,
   activeCurrency: PropTypes.object,
-  setActiveCurrency: PropTypes.func
+  setActiveCurrency: PropTypes.func,
+  projectId: PropTypes.string
 };
 
 export default CurrencySelector;
