@@ -41,70 +41,63 @@ export const CONTACT_LINKS = [
   }
 ];
 
+const projectCardExploreButton = 'Explore';
 
 export const PRODUCT_CARDS_ARRAY = [
   {
     id: 'solana',
-    percent: '5.87&nbsp;%',
-    isSoon: false,
+    percent: '6.05&nbsp;%',
     rewardText: 'Nominal Reward APY',
-    exploreText: 'Explore',
-    percentNumber: 5.87
+    exploreText: projectCardExploreButton,
+    percentNumber: 6.05
   },
   {
     id: 'celo',
-    percent: '2.45&nbsp;%',
-    isSoon: false,
+    percent: '2.89&nbsp;%',
     rewardText: 'Nominal Reward APY',
-    exploreText: 'Explore',
-    percentNumber: 2.45
+    exploreText: projectCardExploreButton,
+    percentNumber: 2.89
   },
   {
     id: 'the-graph',
     percent: '10&nbsp;%',
-    isSoon: false,
     rewardText: 'Nominal Reward APY',
-    exploreText: 'Explore',
+    exploreText: projectCardExploreButton,
     percentNumber: 10
   },
   {
     id: 'oasis-network',
     percent: '10.2&nbsp;%',
-    isSoon: false,
     rewardText: 'Nominal Reward APY',
-    exploreText: 'Explore',
+    exploreText: projectCardExploreButton,
     percentNumber: 10.2
   },
   {
     id: 'agoric',
     percent: '',
-    isSoon: false,
     rewardText: 'Nominal Reward (soon)',
-    exploreText: 'Explore',
+    exploreText: projectCardExploreButton,
     percentNumber: 1
   },
   {
     id: 'regen',
     percent: '29.03&nbsp;%',
-    isSoon: false,
     rewardText: 'Nominal Reward APY',
-    exploreText: 'Explore',
+    exploreText: projectCardExploreButton,
     percentNumber: 29.03
   },
   {
     id: 'sentinel',
     percent: '28.49&nbsp;%',
-    isSoon: false,
     rewardText: 'Nominal Reward APY',
-    exploreText: 'Explore',
+    exploreText: projectCardExploreButton,
     percentNumber: 28.49
   },
   {
     id: 'centrifuge',
     percent: '',
-    isSoon: false,
     rewardText: 'Nominal Reward (soon)',
-    exploreText: 'Explore',
+    exploreText: projectCardExploreButton,
     percentNumber: 1
   },
   {
@@ -113,18 +106,17 @@ export const PRODUCT_CARDS_ARRAY = [
     id: 'cosmic-horizon',
     isSoon: true,
     rewardText: 'Nominal Reward (soon)',
-    exploreText: 'Explore',
+    exploreText: projectCardExploreButton,
     coin: 'coho',
     coinName: 'Cosmic Horizon',
     percentNumber: 1
   },
   {
     id: 'dock',
-    percent: '',
-    isSoon: false,
+    percent: '16.68&nbsp;%',
     rewardText: 'Nominal Reward (soon)',
-    exploreText: 'Explore',
-    percentNumber: 1
+    exploreText: projectCardExploreButton,
+    percentNumber: 16.68
   }
 ];
 

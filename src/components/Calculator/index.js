@@ -9,7 +9,7 @@ import classNames from 'classnames';
 import Button from '../Button/Button';
 import './style/style.scss';
 
-const Calculator = ({projectId}) => {
+const Calculator = ({projectId, onButtonClick}) => {
   const coins = useContext(CoinsContext);
   const [selectedCurrency, setSelectedCurrency] = useState(projectId ? coins.filter(coin => coin.id === projectId)[0] : coins[0]);
   const [activeCurrency, setActiveCurrency] = useState({crypto: true, usd: false});
@@ -51,8 +51,7 @@ const Calculator = ({projectId}) => {
           {projectId &&
             <Button
               label={'Stake Now'}
-              onClick={() => {
-              }}
+              onClick={onButtonClick}
               className={'stake-button'}
             />
           }
@@ -91,7 +90,8 @@ const Calculator = ({projectId}) => {
 };
 
 Calculator.propTypes = {
-  projectId: PropTypes.string
+  projectId: PropTypes.string,
+  onButtonClick: PropTypes.func
 };
 
 export default Calculator;

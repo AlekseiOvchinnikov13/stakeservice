@@ -1,10 +1,10 @@
 import {NavHashLink} from 'react-router-hash-link';
 import {menu} from '../../../data/menu';
-import './style/style.scss';
 import CalculatorButton from '../-CalculatorButton';
 import classNames from 'classnames';
 import {useRef} from 'react';
 import {isMobile} from '../../../helpers/helpers';
+import './style/style.scss';
 
 const Menu = () => {
   const classes = classNames(

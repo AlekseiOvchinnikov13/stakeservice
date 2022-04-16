@@ -13,7 +13,10 @@ import SectionTitles from '../../SectionTitles';
 import {getCoinInfo} from '../../../api/api';
 import Calculator from '../../Calculator';
 import {getMainDataByCoinInfo, isMobile, sliceArrayByCount} from '../../../helpers/helpers';
+import {CONTACT_SUBTITLE} from '../../../data/home';
+import ModalWindowContactForm from '../../ModalWindowContactForm';
 import './style/style.scss';
+import Fade from 'react-reveal/Fade';
 
 const Project = () => {
   const {projectId} = useParams();
@@ -23,6 +26,7 @@ const Project = () => {
   const coinsData = coins.filter(el => el.id === projectId)[0];
   const classes = classNames({[`project-page-${projectId}`]: projectId});
 
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   const [mechanicsList, setMechanicsList] = useState([]);
   const [coinInfo, setCoinInfo] = useState({});
   const [isParagraphOpen, setParagraphOpen] = useState(false);
@@ -35,6 +39,10 @@ const Project = () => {
   };
   const mechanicsReadMoreClickHandle = () => {
     setMechanicsOpen(!isMechanicsOpen);
+  };
+
+  const modalOnClickHandler = () => {
+    setModalIsOpen(!modalIsOpen);
   };
 
   useEffect(async () => {
@@ -54,136 +62,149 @@ const Project = () => {
   if (!projectData || !coinsData) return <Loader/>;
 
   return (
-    <div className="project-page container">
-      <img src={TopBg} alt="background" className="project-page__top-background"/>
-      <div className={classes}>
-        <div className="project-page__header">
-          <div className="header__description-side">
-            <a href={projectData.homepage ? projectData.homepage : coinInfo?.homepage} target="_blank" rel="noreferrer">
-              <img src={coinsData.img} alt={coinsData.coinName}/>
-            </a>
-            <div className="header__text-block">
-              <h4 className="text-block__title">{coinsData.coinName}</h4>
-              <p
-                className="text-block__paragraph"
-                dangerouslySetInnerHTML={{
-                  __html: projectData.description1
-                }}
-              />
-              {projectData.description2 &&
-                <>
-                  <p
-                    ref={paragraphReadMoreRef}
-                    className="text-block__paragraph text-block__paragraph-hidden"
+    <>
+      <div className="project-page container">
+        <img src={TopBg} alt="background" className="project-page__top-background"/>
+        <div className={classes}>
+          <div className="project-page__header">
+            <div className="header__description-side">
+              <Fade left duration={2000}>
+                <a href={projectData.homepage ? projectData.homepage : coinInfo?.homepage} target="_blank"
+                  rel="noreferrer">
+                  <img src={coinsData.img} alt={coinsData.coinName}/>
+                </a>
+              </Fade>
+              <div className="header__text-block">
+                <Fade right duration={2000}>
+                  <h4 className="text-block__title">{coinsData.coinName}</h4>
+                </Fade>
+                <p
+                  className="text-block__paragraph"
+                  dangerouslySetInnerHTML={{
+                    __html: projectData.description1
+                  }}
+                />
+                {projectData.description2 &&
+                  <>
+                    <p
+                      ref={paragraphReadMoreRef}
+                      className="text-block__paragraph text-block__paragraph-hidden"
+                      dangerouslySetInnerHTML={{
+                        __html: projectData.description2
+                      }}
+                    />
+                    <ReadMore
+                      isOpen={isParagraphOpen}
+                      onClick={paragraphReadMoreClickHandle}
+                    />
+                  </>}
+              </div>
+            </div>
+            <div className="header__stake-side">
+              <div className="stake-side__top-info-block">
+                <div className="top-info-block__item">
+                  <span className="top-info-block__active-text"
                     dangerouslySetInnerHTML={{
-                      __html: projectData.description2
+                      __html: coinsData.percent ? coinsData.percent : '- %'
                     }}
                   />
-                  <ReadMore
-                    isOpen={isParagraphOpen}
-                    onClick={paragraphReadMoreClickHandle}
+                  <span className="top-info-block__text">{coinsData.rewardText}</span>
+                </div>
+                <div className="top-info-block__item">
+                  <span className="top-info-block__active-text"
+                    dangerouslySetInnerHTML={{
+                      __html: projectData.stakingCommissionValue
+                    }}
                   />
-                </>}
-            </div>
-          </div>
-          <div className="header__stake-side">
-            <div className="stake-side__top-info-block">
-              <div className="top-info-block__item">
-                <span className="top-info-block__active-text"
-                  dangerouslySetInnerHTML={{
-                    __html: coinsData.percent ? coinsData.percent : '- %'
-                  }}
-                />
-                <span className="top-info-block__text">{coinsData.rewardText}</span>
+                  <span className="top-info-block__text">{projectData.stakingCommissionTitle}</span>
+                </div>
               </div>
-              <div className="top-info-block__item">
-                <span className="top-info-block__active-text"
-                  dangerouslySetInnerHTML={{
-                    __html: projectData.stakingCommissionValue
-                  }}
-                />
-                <span className="top-info-block__text">{projectData.stakingCommissionTitle}</span>
-              </div>
-            </div>
-            <Button
-              label={'Stake Now'}
-              onClick={() => {
-              }}
-              className={'stake-side__stake-button'}
-            />
-            <div className="stake-side__bottom-info-block">
-              <span className="bottom-info-block__text">
-                {projectData.totalStakeTitle} {projectData.totalStakeValue}
-              </span>
-              <span className="bottom-info-block__text">
-                {projectData.delegatorsTitle} {projectData.delegatorsValue ? projectData.delegatorsValue : '-'}
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="project-page__basic-info project-page-section-padding">
-          {projectData && projectData.basicInfoList?.map(infoItem =>
-            <InfoCard
-              key={infoItem.title}
-              title={infoItem.title}
-              value={infoItem.value}
-              isAddress={infoItem.isAddress}
-              className="basic-info__item"
-            />
-          )}
-        </div>
-        <div className="project-page__tutorial project-page-section-padding">
-          <SectionTitles
-            title={`${coinsData.coinName} ${projectData.stakingTutorialTitle}`}
-            subtitle={projectData.stakingTutorialSubTitle}
-            classNameTitle="tutorial__title"
-            classNameSubtitle="tutorial__subtitle"
-          />
-          <div className="tutorial__article-wrapper">
-            {projectData.articleLinks?.map(article =>
-              <ArticleCard
-                data={article}
-                key={`${article.postTitle}${coinsData.coinName}`}
-                coinName={coinsData.coinName}
+              <Button
+                label={'Stake Now'}
+                onClick={modalOnClickHandler}
+                className={'stake-side__stake-button'}
               />
-            )}
+              <div className="stake-side__bottom-info-block">
+                <span className="bottom-info-block__text">
+                  {projectData.totalStakeTitle} {projectData.totalStakeValue}
+                </span>
+                <span className="bottom-info-block__text">
+                  {projectData.delegatorsTitle} {projectData.delegatorsValue ? projectData.delegatorsValue : '-'}
+                </span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="project-page__mechanics project-page-section-padding">
-          <SectionTitles
-            title={`${coinsData.coinName} ${projectData.stakingMechanicsTitle}`}
-            classNameTitle="mechanics__title"
-          />
-          <div className="mechanics__info-card-wrapper">
-            {mechanicsList && mechanicsList.map(info =>
+          <div className="project-page__basic-info project-page-section-padding">
+            {projectData && projectData.basicInfoList?.map(infoItem =>
               <InfoCard
-                title={info[0]}
-                value={info[1]}
-                key={info[0]}
-                className="mechanics-info__item"
+                key={infoItem.title}
+                title={infoItem.title}
+                value={infoItem.value}
+                isAddress={infoItem.isAddress}
+                className="basic-info__item"
               />
             )}
-            {isMobile() &&
-              <ReadMore
-                isOpen={isMechanicsOpen}
-                onClick={mechanicsReadMoreClickHandle}
-                className="mechanics-info__see-all"
-              />
-            }
           </div>
-        </div>
-        {coinsData.price &&
-          <div className="project-page__calculator project-page-section-padding">
+          <div className="project-page__tutorial project-page-section-padding">
             <SectionTitles
-              title={`${coinsData.coinName} ${projectData.rewardsCalculatorTitle}`}
-              classNameTitle="calculator__title"
-              subtitle={`${projectData.rewardsCalculatorSubTitle} ${coinsData.coinName.toLowerCase()}?`}
-              classNameSubtitle="calculator__subtitle"
+              title={`${coinsData.coinName} ${projectData.stakingTutorialTitle}`}
+              subtitle={projectData.stakingTutorialSubTitle}
+              classNameTitle="tutorial__title"
+              classNameSubtitle="tutorial__subtitle"
             />
-            <Calculator projectId={projectId}/>
-          </div>}
+            <div className="tutorial__article-wrapper">
+              {projectData.articleLinks?.map(article =>
+                <ArticleCard
+                  data={article}
+                  key={`${article.postTitle}${coinsData.coinName}`}
+                  coinName={coinsData.coinName}
+                />
+              )}
+            </div>
+          </div>
+          <div className="project-page__mechanics project-page-section-padding">
+            <SectionTitles
+              title={`${coinsData.coinName} ${projectData.stakingMechanicsTitle}`}
+              classNameTitle="mechanics__title"
+            />
+            <div className="mechanics__info-card-wrapper">
+              {mechanicsList && mechanicsList.map(info =>
+                <InfoCard
+                  title={info[0]}
+                  value={info[1]}
+                  key={info[0]}
+                  className="mechanics-info__item"
+                />
+              )}
+              {isMobile() &&
+                <ReadMore
+                  isOpen={isMechanicsOpen}
+                  onClick={mechanicsReadMoreClickHandle}
+                  className="mechanics-info__see-all"
+                />
+              }
+            </div>
+          </div>
+          {coinsData.price &&
+            <div className="project-page__calculator project-page-section-padding">
+              <SectionTitles
+                title={`${coinsData.coinName} ${projectData.rewardsCalculatorTitle}`}
+                classNameTitle="calculator__title"
+                subtitle={`${projectData.rewardsCalculatorSubTitle} ${coinsData.coinName.toLowerCase()}?`}
+                classNameSubtitle="calculator__subtitle"
+              />
+              <Calculator projectId={projectId} onButtonClick={modalOnClickHandler}/>
+            </div>}
+        </div>
       </div>
-    </div>
+      <ModalWindowContactForm
+        visible={modalIsOpen}
+        onClose={modalOnClickHandler}
+        className="project-page-modal"
+        title={CONTACT_SUBTITLE}
+        projectId={projectId}
+      />
+    </>
   );
 };
 

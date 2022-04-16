@@ -15,7 +15,6 @@ import {
   WHAT_WE_DO,
   WHAT_WE_DO_TEXT,
 } from '../../../data/home';
-import './style/style.scss';
 import TopBg from './images/top-bg.svg';
 import FooterBg from './images/footer-bg.svg';
 import WhatWeDoBg from './images/what-we-do-bg.svg';
@@ -36,6 +35,7 @@ import ContactForm from '../../ContactForm';
 import LinkArrow from '../../LinkArrow';
 import {PostsContext} from '../../../context/postsContext';
 import BlogCard from '../../BlogCard';
+import './style/style.scss';
 
 const Home = () => {
   const [isProjectWrapperOpen, setIsProjectOpen] = useState(false);

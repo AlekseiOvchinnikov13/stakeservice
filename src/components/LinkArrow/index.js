@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import {NavLink} from 'react-router-dom';
-import './style/style.scss';
 import classNames from 'classnames';
+import './style/style.scss';
 
 const LinkArrow = ({to, label, className, isOpenNewPage}) => {
   const classes = classNames('link-arrow', className);

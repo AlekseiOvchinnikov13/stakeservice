@@ -1,7 +1,7 @@
 import classNames from 'classnames';
-import './style/style.scss';
 import PropTypes from 'prop-types';
 import ArrowRight from './-ArrowRight';
+import './style/style.scss';
 
 const Button = ({label, onClick, className}) => {
   const classes = classNames('button', className);

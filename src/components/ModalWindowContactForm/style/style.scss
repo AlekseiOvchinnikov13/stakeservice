@@ -1,0 +1,59 @@
+.modal-contact-form {
+  .modal-dialog {
+    justify-content: space-between;
+    height: 40vh;
+  }
+
+  .modal-body {
+    .modal-content {
+      #write-to-us {
+        padding-top: 0;
+        align-items: center;
+
+        .form-text-input-wrapper input {
+          flex-basis: 100%;
+        }
+
+        .form-text-input-wrapper input + input {
+          margin-top: 20px;
+        }
+
+        .submit-button {
+          margin-top: 20px;
+          width: 100%;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .modal-contact-form .modal-body .modal-content #write-to-us {
+    padding: 0;
+  }
+}
+
+@media (max-height: 870px) {
+  .modal-contact-form .modal-dialog {
+    height: 45vh;
+  }
+}
+
+@media (max-height: 760px) {
+  .modal-contact-form .modal-dialog {
+    height: 50vh;
+  }
+}
+
+@media (max-height: 680px) {
+  .modal-contact-form .modal-dialog {
+    height: 55vh;
+  }
+}
+
+@media (max-height: 570px) {
+  .modal-contact-form .modal-dialog {
+    height: 60vh;
+  }
+}

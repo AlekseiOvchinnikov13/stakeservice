@@ -27,7 +27,6 @@ const CurrencySelector = ({
     setUsdCurrencyNameClasses(`currency-name usd-currency-name${usd ? ' currency-name-active' : ''}`);
   }, [usd, isOpenSelect]);
 
-
   const onClickSelectCurrency = obj => {
     setSelectedCurrency(obj);
     onClickArrowSelect();

@@ -18,17 +18,21 @@ const mediumSiteLabel = 'medium.com';
 const mediumSiteLink = 'https://medium.com/stake-service';
 const sourceButtonLabel = 'See Explained';
 
+const stakingCommissionTitle = 'Staking Commission';
+const totalStakeTitle = 'Our Total Stake:';
+const delegatorsTitle = 'Delegators:';
+
 export const ProjectsData = [
   {
     projectId: 'solana',
     data: {
       description1: 'Solana is&nbsp;a&nbsp;high-performance cryptocurrency blockchain that supports smart contracts and decentralized applications. Its feature is&nbsp;the use of&nbsp;a&nbsp;special PoS consensus mechanism, called Proof-of-History, with time-stamped transactions in&nbsp;order to&nbsp;achieve maximum efficiency.',
       description2: 'Solana solves one of&nbsp;the main problems-slow transactions and high costs (which are found in&nbsp;layer-1&nbsp;analogues, for example, Bitcoin and Ethereum). Solana is&nbsp;capable of&nbsp;processing about 50,000 transactions per second. Also an&nbsp;important area of&nbsp;activity of&nbsp;the Solana Foundation is&nbsp;to&nbsp;ensure greater access to&nbsp;decentralized finance.',
-      stakingCommissionTitle: 'Staking Commission',
+      stakingCommissionTitle: stakingCommissionTitle,
       stakingCommissionValue: '10&nbsp;%',
-      totalStakeTitle: 'Our Total Stake:',
+      totalStakeTitle: totalStakeTitle,
       totalStakeValue: '206448',
-      delegatorsTitle: 'Delegators:',
+      delegatorsTitle: delegatorsTitle,
       delegatorsValue: '484',
       basicInfoList: [
         {
@@ -82,11 +86,11 @@ export const ProjectsData = [
     data: {
       description1: 'Celo is&nbsp;global payments infrastructure built for mobile Thousands of&nbsp;organizations and individuals are developing, growing, and governing Celo, an&nbsp;open-source platform that enables anyone to&nbsp;build borderless applications.',
       description2: 'We&nbsp;believe that people live primarily in&nbsp;connection to&nbsp;one another. We&nbsp;recognize that individuals are healthier and happier when they are members of&nbsp;a&nbsp;strong social community with meaningful relationships&nbsp;&mdash; that&nbsp;is, when they are living within a&nbsp;healthy and happy whole. We&nbsp;embrace values that strengthen community.',
-      stakingCommissionTitle: 'Staking Commission',
+      stakingCommissionTitle: stakingCommissionTitle,
       stakingCommissionValue: '50&nbsp;%',
-      totalStakeTitle: 'Our Total Stake:',
+      totalStakeTitle: totalStakeTitle,
       totalStakeValue: '10974.72',
-      delegatorsTitle: 'Delegators:',
+      delegatorsTitle: delegatorsTitle,
       basicInfoList: [
         {
           title: basicInfoProtocolCategoryTitile,
@@ -139,11 +143,11 @@ export const ProjectsData = [
     data: {
       description1: 'The Graph is&nbsp;an&nbsp;indexing protocol and a&nbsp;global API for organizing blockchain data. Easy access to&nbsp;them is&nbsp;provided by&nbsp;GraphQL. The main difference (from other PoS networks) of&nbsp;delegation to&nbsp;the Graph is&nbsp;that the indexers that GRT holders can delegate represent indexing and query processing services for open API subgraphs.',
       description2: 'Subgraphs can be&nbsp;queried by&nbsp;applications via GraphQL, and together with Indexers, Curators, and Delegates, they form a&nbsp;decentralized data marketplace for the Web3&nbsp;ecosystem.',
-      stakingCommissionTitle: 'Staking Commission',
+      stakingCommissionTitle: stakingCommissionTitle,
       stakingCommissionValue: '0&nbsp;%',
-      totalStakeTitle: 'Our Total Stake:',
+      totalStakeTitle: totalStakeTitle,
       totalStakeValue: '1605464.53',
-      delegatorsTitle: 'Delegators:',
+      delegatorsTitle: delegatorsTitle,
       delegatorsValue: '178',
       basicInfoList: [
         {
@@ -193,11 +197,11 @@ export const ProjectsData = [
     data: {
       description1: 'By&nbsp;bringing privacy and scalability to&nbsp;DeFi, the Oasis Network expands DeFi beyond early adopters to&nbsp;a&nbsp;mass market. It&nbsp;enables private smart contracts, high scalability, and the ability to&nbsp;tokenize data.',
       description2: 'This unlocks new use cases like private lending, undercollateralized loans, and private automated market makers.',
-      stakingCommissionTitle: 'Staking Commission',
+      stakingCommissionTitle: stakingCommissionTitle,
       stakingCommissionValue: '18&nbsp;%',
-      totalStakeTitle: 'Our Total Stake:',
+      totalStakeTitle: totalStakeTitle,
       totalStakeValue: '274519.95',
-      delegatorsTitle: 'Delegators:',
+      delegatorsTitle: delegatorsTitle,
       delegatorsValue: '17',
       basicInfoList: [
         {
@@ -250,11 +254,11 @@ export const ProjectsData = [
     data: {
       description1: 'Agoric is&nbsp;an&nbsp;open-source development company launching an&nbsp;interoperable Proof-of-Stake chain and economy. Our JavaScript-native smart contract platform offers developers a&nbsp;safe, reusable library of&nbsp;DeFi components to&nbsp;rapidly build and deploy on-chain.',
       description2: '',
-      stakingCommissionTitle: 'Staking Commission',
+      stakingCommissionTitle: stakingCommissionTitle,
       stakingCommissionValue: '2&nbsp;%',
-      totalStakeTitle: 'Our Total Stake:',
+      totalStakeTitle: totalStakeTitle,
       totalStakeValue: '110387',
-      delegatorsTitle: 'Delegators:',
+      delegatorsTitle: delegatorsTitle,
       basicInfoList: [
         {
           title: basicInfoProtocolCategoryTitile,
@@ -307,11 +311,11 @@ export const ProjectsData = [
     data: {
       description1: 'The Sentinel Network ($DVPN) is&nbsp;a&nbsp;peer to&nbsp;peer bandwidth marketplace that enables Decentralized Virtual Private Network (dVPN) applications and services.',
       description2: 'Powered by&nbsp;the native $dVPN token along with Tendermint core &amp;&nbsp;Exidio.',
-      stakingCommissionTitle: 'Staking Commission',
+      stakingCommissionTitle: stakingCommissionTitle,
       stakingCommissionValue: '2&nbsp;%',
-      totalStakeTitle: 'Our Total Stake:',
+      totalStakeTitle: totalStakeTitle,
       totalStakeValue: '391221.39',
-      delegatorsTitle: 'Delegators:',
+      delegatorsTitle: delegatorsTitle,
       basicInfoList: [
         {
           title: basicInfoProtocolCategoryTitile,
@@ -362,11 +366,11 @@ export const ProjectsData = [
     data: {
       description1: 'Centrifuge is&nbsp;a&nbsp;decentralized asset financing protocol. It&nbsp;connects decentralized finance (DeFi) with real-world assets (RWA) while trying to&nbsp;lower the cost of&nbsp;capital for small and mid-size enterprises (SMEs) and provide investors with a&nbsp;stable source of&nbsp;income. The main goal of&nbsp;the project is&nbsp;to&nbsp;generate profits that are not tied to&nbsp;volatile crypto assets; the developers are pursuing the task of&nbsp;transferring real monetary value from fiat to&nbsp;cryptocurrencies.',
       description2: 'Companies are using Centrifuge to&nbsp;access the liquidity that DeFi has to&nbsp;offer. They can tokenize real assets and use these tokens as&nbsp;collateral to&nbsp;access financing through Tinlake, a&nbsp;decentralized application (DApp) lending protocol. The Centrifuge blockchain is&nbsp;built on&nbsp;Polkadot (DOT) for speed and low fees, while its financial DApp Tinlake is&nbsp;built to&nbsp;access Ethereum (ETH) liquidity.',
-      stakingCommissionTitle: 'Staking Commission',
+      stakingCommissionTitle: stakingCommissionTitle,
       stakingCommissionValue: '-&nbsp;%',
-      totalStakeTitle: 'Our Total Stake:',
+      totalStakeTitle: totalStakeTitle,
       totalStakeValue: '-',
-      delegatorsTitle: 'Delegators:',
+      delegatorsTitle: delegatorsTitle,
       delegatorsValue: '-',
       basicInfoList: [
         {
@@ -419,11 +423,11 @@ export const ProjectsData = [
       description1: 'Our application-specific blockchain is&nbsp;built using the Cosmos SDK, an&nbsp;open-source framework for building multi-asset public Proof-of-Stake (PoS) blockchains and one of&nbsp;the most powerfull tools in&nbsp;the industry.',
       description2: 'Cosmic Horizon is&nbsp;not just an&nbsp;experience, it&rsquo;s a&nbsp;community! Using the power of&nbsp;governance you get to&nbsp;decide how to&nbsp;make it&nbsp;an&nbsp;amazing one. You are at&nbsp;the center of&nbsp;this mission!',
       homepage: 'https://cosmic-horizon.com/',
-      stakingCommissionTitle: 'Staking Commission',
+      stakingCommissionTitle: stakingCommissionTitle,
       stakingCommissionValue: '-&nbsp;%',
-      totalStakeTitle: 'Our Total Stake:',
+      totalStakeTitle: totalStakeTitle,
       totalStakeValue: '-',
-      delegatorsTitle: 'Delegators:',
+      delegatorsTitle: delegatorsTitle,
       delegatorsValue: '-',
       basicInfoList: [
         {
@@ -474,11 +478,11 @@ export const ProjectsData = [
     data: {
       description1: 'Dock is&nbsp;a&nbsp;platform designed to&nbsp;provide a&nbsp;simple solution for businesses and developers to&nbsp;build, manage and present digital credentials that are instantly verifiable using blockchain technology.',
       description2: 'With a standalone blockchain and integrated payment and incentivisation token, a trusted network of validators, and seamless adoption and interoperability, Dock is part of a movement to solve universal problems with existing data and how it is captured, shared and controlled.',
-      stakingCommissionTitle: 'Staking Commission',
+      stakingCommissionTitle: stakingCommissionTitle,
       stakingCommissionValue: '-&nbsp;%',
-      totalStakeTitle: 'Our Total Stake:',
+      totalStakeTitle: totalStakeTitle,
       totalStakeValue: '-',
-      delegatorsTitle: 'Delegators:',
+      delegatorsTitle: delegatorsTitle,
       delegatorsValue: '-',
       basicInfoList: [
         {
@@ -528,11 +532,11 @@ export const ProjectsData = [
     data: {
       description1: 'Platform for a&nbsp;Thriving Planet Regen Network aligns economics with ecology to&nbsp;drive regenerative land management. Regen Ledger is&nbsp;a&nbsp;public, proof of&nbsp;stake (PoS) blockchain developed with the Cosmos Software Development Kit (SDK) built for verification of&nbsp;claims, agreements &amp;&nbsp;data related to&nbsp;ecological state.',
       description2: 'Regen Ledger enables multiple registries to&nbsp;communicate and transact with each other producing a&nbsp;public ecological accounting system. Get involved with our community of&nbsp;developers.',
-      stakingCommissionTitle: 'Staking Commission',
+      stakingCommissionTitle: stakingCommissionTitle,
       stakingCommissionValue: '4&nbsp;%',
-      totalStakeTitle: 'Our Total Stake:',
+      totalStakeTitle: totalStakeTitle,
       totalStakeValue: '1856929',
-      delegatorsTitle: 'Delegators:',
+      delegatorsTitle: delegatorsTitle,
       basicInfoList: [
         {
           title: basicInfoProtocolCategoryTitile,

@@ -114,6 +114,7 @@
 
 #contact {
   padding-bottom: 100px;
+  position: relative;
 
   .contact-header {
     position: relative;
@@ -130,7 +131,7 @@
     &__background {
       position: absolute;
       right: 0;
-      bottom: 0;
+      bottom: -255px;
     }
   }
 }

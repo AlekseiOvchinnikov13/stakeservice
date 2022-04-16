@@ -1,4 +1,3 @@
-import './style/style.scss';
 import TextStroke from '../../TextStroke';
 import {BLOG, BLOG_SUBTITLE} from '../../../data/common';
 import topBg from './images/blog-top-bg.svg';
@@ -8,6 +7,7 @@ import {useContext, useEffect, useState} from 'react';
 import BlogCard from '../../BlogCard';
 import {PostsContext} from '../../../context/postsContext';
 import classNames from 'classnames';
+import './style/style.scss';
 
 const Blog = () => {
   const posts = useContext(PostsContext);

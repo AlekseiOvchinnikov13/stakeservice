@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import './style/style.scss';
 import {useState} from 'react';
+import './style/style.scss';
 
 const Tag = ({label, className, isFilter, addHandle, delHandle}) => {
   const [isActive, setActive] = useState(false);

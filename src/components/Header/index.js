@@ -1,8 +1,8 @@
 import Menu from './-Menu';
 import Logo from './-Logo';
 import CalculatorButton from './-CalculatorButton';
-import './style/style.scss';
 import {isMobile} from '../../helpers/helpers';
+import './style/style.scss';
 
 const Header = () => {
   return (

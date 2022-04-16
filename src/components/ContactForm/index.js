@@ -7,25 +7,21 @@ import {
   INPUT_NAME_PLACEHOLDER,
   TEXT_AFTER_SUBMIT
 } from '../../data/form';
-import './style/style.scss';
 import ArrowRight from '../Button/-ArrowRight';
 import Loader from '../Loader';
 import Text from '../Text';
+import PropTypes from 'prop-types';
+import './style/style.scss';
 
-const ContactForm = () => {
+const ContactForm = ({projectId}) => {
   const [state, handleSubmit] = useForm('mvolbvjv');
-
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [checked, setChecked] = useState(false);
 
-  if (state.submitting) {
-    return <Loader/>;
-  }
+  if (state.submitting) return <Loader/>;
 
-  if (state.succeeded) {
-    return <Text text={TEXT_AFTER_SUBMIT}/>;
-  }
+  if (state.succeeded) return <Text text={TEXT_AFTER_SUBMIT}/>;
 
   return (
     <form id="write-to-us" onSubmit={handleSubmit}>
@@ -58,16 +54,24 @@ const ContactForm = () => {
           field="email"
           errors={state.errors}
         />
-        <label className="checkbox-label">
+        {projectId &&
           <input
-            id="checkbox"
-            name="checkbox"
-            type="checkbox"
+            name='project'
+            type='text'
+            value={projectId}
+            hidden
+          />
+        }
+        {!projectId && < label className='checkbox-label'>
+          <input
+            id='checkbox'
+            name='checkbox'
+            type='checkbox'
             checked={checked}
             onChange={() => setChecked(!checked)}
           />
           {INPUT_CHECKBOX_TEXT}
-        </label>
+        </label>}
       </div>
       <button
         type="submit"
@@ -79,6 +83,10 @@ const ContactForm = () => {
       </button>
     </form>
   );
+};
+
+ContactForm.propTypes = {
+  projectId: PropTypes.string
 };
 
 export default ContactForm;

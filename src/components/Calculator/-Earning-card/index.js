@@ -1,10 +1,10 @@
-import './style.scss';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {CALCULATOR_DOLLAR_SYMBOL} from '../../../data/calculator';
 import {useContext} from 'react';
 import {CoinsContext} from '../../../context/CoinsContext';
 import {getProfitByCoin} from '../../../helpers/helpers';
+import './style.scss';
 
 const EarningCard = ({
   isCryptoActive,

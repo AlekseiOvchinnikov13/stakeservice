@@ -38,9 +38,9 @@ export const isMobile = () =>
   window.innerWidth <= MobileWidth;
 
 /**
- * Сокращает массив до num количества элементов
- * @param num Возвращаемая длина массива
- * @param array Массив
+ * Reduces an array to the num of elements
+ * @param num Desired array length
+ * @param array Array
  * @returns {*}
  */
 export const sliceArrayByCount = (num, array) =>
@@ -60,8 +60,8 @@ export const getAllCategories = () => {
 };
 
 /**
- * Получить только главные метрики по криптовалюте
- * @param data Все метрики по криптовалюте
+ * Get only the main cryptocurrency metrics
+ * @param data All cryptocurrency metrics
  * @returns {{'coingecko rank': *, 'market_cap rank': *, 'coingecko score': *, 'liquidity score': *, ath: (boolean|*), 'current price': (boolean|*), atl: (boolean|*), 'community score': *, 'developer score': *, 'total supply': *, homepage: *}}
  * @param {*} data
  */

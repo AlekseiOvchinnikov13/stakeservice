@@ -1,11 +1,10 @@
 import {CATEGORIES_TITLE} from '../../data/blog';
-import './style/style.scss';
 import {getAllCategories} from '../../helpers/helpers';
 import Tag from '../BlogCard/-Tag';
 import PropTypes from 'prop-types';
+import './style/style.scss';
 
 const Categories = ({addHandle, delHandle}) => {
-
   return (
     <div className="categories">
       <p>{CATEGORIES_TITLE}</p>
