@@ -196,8 +196,9 @@ export const ProjectsData = [
       stakingCommissionTitle: 'Staking Commission',
       stakingCommissionValue: '18&nbsp;%',
       totalStakeTitle: 'Our Total Stake:',
-      totalStakeValue: '5952992,37',
+      totalStakeValue: '274519.95',
       delegatorsTitle: 'Delegators:',
+      delegatorsValue: '17',
       basicInfoList: [
         {
           title: basicInfoProtocolCategoryTitile,
@@ -250,11 +251,10 @@ export const ProjectsData = [
       description1: 'Agoric is&nbsp;an&nbsp;open-source development company launching an&nbsp;interoperable Proof-of-Stake chain and economy. Our JavaScript-native smart contract platform offers developers a&nbsp;safe, reusable library of&nbsp;DeFi components to&nbsp;rapidly build and deploy on-chain.',
       description2: '',
       stakingCommissionTitle: 'Staking Commission',
-      stakingCommissionValue: '10&nbsp;%',
+      stakingCommissionValue: '2&nbsp;%',
       totalStakeTitle: 'Our Total Stake:',
-      totalStakeValue: '206448',
+      totalStakeValue: '110387',
       delegatorsTitle: 'Delegators:',
-      delegatorsValue: '484',
       basicInfoList: [
         {
           title: basicInfoProtocolCategoryTitile,
@@ -262,7 +262,7 @@ export const ProjectsData = [
         },
         {
           title: basicInfoStakingTypeTitile,
-          value: 'PoH'
+          value: 'PoS'
         },
         {
           title: basicInfoGovernanceTitile,
@@ -270,29 +270,29 @@ export const ProjectsData = [
         },
         {
           title: basicInfoValidatorAddressTitile,
-          value: '4dmBLJcchyfucSxkVmrymmsnVpZm3rBkp7kbF7qHTTYW',
+          value: 'agoricvaloper1upz9xpay0qx0vqealgr69ejtpzj5gskla5v0d9',
           isAddress: true
         }
       ],
       stakingTutorialTitle: stakingTutorialTitle,
-      stakingTutorialSubTitle: 'Your SOLs must be in a wallet or custodial account in order to use our staking services.',
+      stakingTutorialSubTitle: 'Your BLDs must be in a wallet or custodial account in order to use our staking services.',
       articleLinks: [
         {
           articleTitle: introductoryArticleTitle,
-          postTitle: 'INTRODUCTION TO SOLANA',
+          postTitle: 'Introducing article about Agoric',
           siteLink: mediumSiteLink,
           siteText: mediumSiteLabel,
-          sourceLink: 'https://medium.com/stake-service/introduction-to-solana-f35e23a25a61',
+          sourceLink: 'https://medium.com/stake-service/agoric-d288f101efd6',
           sourceText: sourceButtonLabel,
           img: IntroImg
         },
         {
           articleTitle: howToStakeArticleTitle,
-          articleSubtitle: 'via Solflare Wallet',
-          postTitle: 'How to stake Solana tokens',
+          articleSubtitle: 'via Keplr wallet',
+          postTitle: 'How to stake Agoric ($BLD) tokens',
           siteLink: mediumSiteLink,
           siteText: mediumSiteLabel,
-          sourceLink: 'https://medium.com/stake-service/how-to-stake-solana-tokens-7a6542fe4ec8',
+          sourceLink: 'https://medium.com/stake-service/how-to-stake-agoric-bld-tokens-312c0dfd8b37',
           sourceText: sourceButtonLabel,
           img: StakeImg
         }
@@ -308,11 +308,10 @@ export const ProjectsData = [
       description1: 'The Sentinel Network ($DVPN) is&nbsp;a&nbsp;peer to&nbsp;peer bandwidth marketplace that enables Decentralized Virtual Private Network (dVPN) applications and services.',
       description2: 'Powered by&nbsp;the native $dVPN token along with Tendermint core &amp;&nbsp;Exidio.',
       stakingCommissionTitle: 'Staking Commission',
-      stakingCommissionValue: '10&nbsp;%',
+      stakingCommissionValue: '2&nbsp;%',
       totalStakeTitle: 'Our Total Stake:',
-      totalStakeValue: '206448',
+      totalStakeValue: '391221.39',
       delegatorsTitle: 'Delegators:',
-      delegatorsValue: '484',
       basicInfoList: [
         {
           title: basicInfoProtocolCategoryTitile,
@@ -320,7 +319,7 @@ export const ProjectsData = [
         },
         {
           title: basicInfoStakingTypeTitile,
-          value: 'PoH'
+          value: 'PoS'
         },
         {
           title: basicInfoGovernanceTitile,
@@ -328,29 +327,27 @@ export const ProjectsData = [
         },
         {
           title: basicInfoValidatorAddressTitile,
-          value: '4dmBLJcchyfucSxkVmrymmsnVpZm3rBkp7kbF7qHTTYW',
+          value: 'sentvaloper163g6kygmh08mgp0kj4gkenl4hj6nsqzguk6rzf',
           isAddress: true
         }
       ],
       stakingTutorialTitle: stakingTutorialTitle,
-      stakingTutorialSubTitle: 'Your SOLs must be in a wallet or custodial account in order to use our staking services.',
+      stakingTutorialSubTitle: 'Your DVPNs must be in a wallet or custodial account in order to use our staking services.',
       articleLinks: [
         {
           articleTitle: introductoryArticleTitle,
-          postTitle: 'INTRODUCTION TO SOLANA',
           siteLink: mediumSiteLink,
           siteText: mediumSiteLabel,
-          sourceLink: 'https://medium.com/stake-service/introduction-to-solana-f35e23a25a61',
-          sourceText: sourceButtonLabel,
-          img: IntroImg
+          img: IntroImg,
+          isSoon: true
         },
         {
           articleTitle: howToStakeArticleTitle,
-          articleSubtitle: 'via Solflare Wallet',
-          postTitle: 'How to stake Solana tokens',
+          articleSubtitle: 'via Keplr wallet',
+          postTitle: 'Greetings! A new regular manual telling us about the staking of dVPN coins of the Sentinel project. We’ll be using our favorite Keplr wallet!',
           siteLink: mediumSiteLink,
           siteText: mediumSiteLabel,
-          sourceLink: 'https://medium.com/stake-service/how-to-stake-solana-tokens-7a6542fe4ec8',
+          sourceLink: 'https://medium.com/stake-service/greetings-bd2a1955434e',
           sourceText: sourceButtonLabel,
           img: StakeImg
         }
@@ -366,11 +363,11 @@ export const ProjectsData = [
       description1: 'Centrifuge is&nbsp;a&nbsp;decentralized asset financing protocol. It&nbsp;connects decentralized finance (DeFi) with real-world assets (RWA) while trying to&nbsp;lower the cost of&nbsp;capital for small and mid-size enterprises (SMEs) and provide investors with a&nbsp;stable source of&nbsp;income. The main goal of&nbsp;the project is&nbsp;to&nbsp;generate profits that are not tied to&nbsp;volatile crypto assets; the developers are pursuing the task of&nbsp;transferring real monetary value from fiat to&nbsp;cryptocurrencies.',
       description2: 'Companies are using Centrifuge to&nbsp;access the liquidity that DeFi has to&nbsp;offer. They can tokenize real assets and use these tokens as&nbsp;collateral to&nbsp;access financing through Tinlake, a&nbsp;decentralized application (DApp) lending protocol. The Centrifuge blockchain is&nbsp;built on&nbsp;Polkadot (DOT) for speed and low fees, while its financial DApp Tinlake is&nbsp;built to&nbsp;access Ethereum (ETH) liquidity.',
       stakingCommissionTitle: 'Staking Commission',
-      stakingCommissionValue: '10&nbsp;%',
+      stakingCommissionValue: '-&nbsp;%',
       totalStakeTitle: 'Our Total Stake:',
-      totalStakeValue: '206448',
+      totalStakeValue: '-',
       delegatorsTitle: 'Delegators:',
-      delegatorsValue: '484',
+      delegatorsValue: '-',
       basicInfoList: [
         {
           title: basicInfoProtocolCategoryTitile,
@@ -378,39 +375,37 @@ export const ProjectsData = [
         },
         {
           title: basicInfoStakingTypeTitile,
-          value: 'PoH'
+          value: 'PoS'
         },
         {
           title: basicInfoGovernanceTitile,
-          value: 'Validator vote'
+          value: '-'
         },
         {
           title: basicInfoValidatorAddressTitile,
-          value: '4dmBLJcchyfucSxkVmrymmsnVpZm3rBkp7kbF7qHTTYW',
+          value: '-',
           isAddress: true
         }
       ],
       stakingTutorialTitle: stakingTutorialTitle,
-      stakingTutorialSubTitle: 'Your SOLs must be in a wallet or custodial account in order to use our staking services.',
+      stakingTutorialSubTitle: 'Your CFGs must be in a wallet or custodial account in order to use our staking services.',
       articleLinks: [
         {
           articleTitle: introductoryArticleTitle,
-          postTitle: 'INTRODUCTION TO SOLANA',
+          postTitle: 'INTRODUCTION TO CENTRIFUGE',
           siteLink: mediumSiteLink,
           siteText: mediumSiteLabel,
-          sourceLink: 'https://medium.com/stake-service/introduction-to-solana-f35e23a25a61',
+          sourceLink: 'https://medium.com/stake-service/introduction-to-centrifuge-379303ae8dda',
           sourceText: sourceButtonLabel,
           img: IntroImg
         },
         {
           articleTitle: howToStakeArticleTitle,
-          articleSubtitle: 'via Solflare Wallet',
-          postTitle: 'How to stake Solana tokens',
           siteLink: mediumSiteLink,
           siteText: mediumSiteLabel,
-          sourceLink: 'https://medium.com/stake-service/how-to-stake-solana-tokens-7a6542fe4ec8',
           sourceText: sourceButtonLabel,
-          img: StakeImg
+          img: StakeImg,
+          isSoon: true
         }
       ],
       stakingMechanicsTitle: stakingMechanicsTitle,
@@ -421,14 +416,15 @@ export const ProjectsData = [
   {
     projectId: 'cosmic-horizon',
     data: {
-      description1: '',
-      description2: '',
+      description1: 'Our application-specific blockchain is&nbsp;built using the Cosmos SDK, an&nbsp;open-source framework for building multi-asset public Proof-of-Stake (PoS) blockchains and one of&nbsp;the most powerfull tools in&nbsp;the industry.',
+      description2: 'Cosmic Horizon is&nbsp;not just an&nbsp;experience, it&rsquo;s a&nbsp;community! Using the power of&nbsp;governance you get to&nbsp;decide how to&nbsp;make it&nbsp;an&nbsp;amazing one. You are at&nbsp;the center of&nbsp;this mission!',
+      homepage: 'https://cosmic-horizon.com/',
       stakingCommissionTitle: 'Staking Commission',
-      stakingCommissionValue: '10&nbsp;%',
+      stakingCommissionValue: '-&nbsp;%',
       totalStakeTitle: 'Our Total Stake:',
-      totalStakeValue: '206448',
+      totalStakeValue: '-',
       delegatorsTitle: 'Delegators:',
-      delegatorsValue: '484',
+      delegatorsValue: '-',
       basicInfoList: [
         {
           title: basicInfoProtocolCategoryTitile,
@@ -436,39 +432,36 @@ export const ProjectsData = [
         },
         {
           title: basicInfoStakingTypeTitile,
-          value: 'PoH'
+          value: 'PoS'
         },
         {
           title: basicInfoGovernanceTitile,
-          value: 'Validator vote'
+          value: '-'
         },
         {
           title: basicInfoValidatorAddressTitile,
-          value: '4dmBLJcchyfucSxkVmrymmsnVpZm3rBkp7kbF7qHTTYW',
+          value: '-',
           isAddress: true
         }
       ],
       stakingTutorialTitle: stakingTutorialTitle,
-      stakingTutorialSubTitle: 'Your SOLs must be in a wallet or custodial account in order to use our staking services.',
+      stakingTutorialSubTitle: 'Your COHOs must be in a wallet or custodial account in order to use our staking services.',
       articleLinks: [
         {
           articleTitle: introductoryArticleTitle,
-          postTitle: 'INTRODUCTION TO SOLANA',
           siteLink: mediumSiteLink,
           siteText: mediumSiteLabel,
-          sourceLink: 'https://medium.com/stake-service/introduction-to-solana-f35e23a25a61',
           sourceText: sourceButtonLabel,
-          img: IntroImg
+          img: IntroImg,
+          isSoon: true
         },
         {
           articleTitle: howToStakeArticleTitle,
-          articleSubtitle: 'via Solflare Wallet',
-          postTitle: 'How to stake Solana tokens',
           siteLink: mediumSiteLink,
           siteText: mediumSiteLabel,
-          sourceLink: 'https://medium.com/stake-service/how-to-stake-solana-tokens-7a6542fe4ec8',
           sourceText: sourceButtonLabel,
-          img: StakeImg
+          img: StakeImg,
+          isSoon: true
         }
       ],
       stakingMechanicsTitle: stakingMechanicsTitle,
@@ -482,11 +475,11 @@ export const ProjectsData = [
       description1: 'Dock is&nbsp;a&nbsp;platform designed to&nbsp;provide a&nbsp;simple solution for businesses and developers to&nbsp;build, manage and present digital credentials that are instantly verifiable using blockchain technology.',
       description2: 'With a standalone blockchain and integrated payment and incentivisation token, a trusted network of validators, and seamless adoption and interoperability, Dock is part of a movement to solve universal problems with existing data and how it is captured, shared and controlled.',
       stakingCommissionTitle: 'Staking Commission',
-      stakingCommissionValue: '10&nbsp;%',
+      stakingCommissionValue: '-&nbsp;%',
       totalStakeTitle: 'Our Total Stake:',
-      totalStakeValue: '206448',
+      totalStakeValue: '-',
       delegatorsTitle: 'Delegators:',
-      delegatorsValue: '484',
+      delegatorsValue: '-',
       basicInfoList: [
         {
           title: basicInfoProtocolCategoryTitile,
@@ -494,39 +487,35 @@ export const ProjectsData = [
         },
         {
           title: basicInfoStakingTypeTitile,
-          value: 'PoH'
+          value: 'PoS'
         },
         {
           title: basicInfoGovernanceTitile,
-          value: 'Validator vote'
         },
         {
           title: basicInfoValidatorAddressTitile,
-          value: '4dmBLJcchyfucSxkVmrymmsnVpZm3rBkp7kbF7qHTTYW',
+          value: '-',
           isAddress: true
         }
       ],
       stakingTutorialTitle: stakingTutorialTitle,
-      stakingTutorialSubTitle: 'Your SOLs must be in a wallet or custodial account in order to use our staking services.',
+      stakingTutorialSubTitle: 'Your DOCKs must be in a wallet or custodial account in order to use our staking services.',
       articleLinks: [
         {
           articleTitle: introductoryArticleTitle,
-          postTitle: 'INTRODUCTION TO SOLANA',
           siteLink: mediumSiteLink,
           siteText: mediumSiteLabel,
-          sourceLink: 'https://medium.com/stake-service/introduction-to-solana-f35e23a25a61',
           sourceText: sourceButtonLabel,
-          img: IntroImg
+          img: IntroImg,
+          isSoon: true
         },
         {
           articleTitle: howToStakeArticleTitle,
-          articleSubtitle: 'via Solflare Wallet',
-          postTitle: 'How to stake Solana tokens',
           siteLink: mediumSiteLink,
           siteText: mediumSiteLabel,
-          sourceLink: 'https://medium.com/stake-service/how-to-stake-solana-tokens-7a6542fe4ec8',
           sourceText: sourceButtonLabel,
-          img: StakeImg
+          img: StakeImg,
+          isSoon: true
         }
       ],
       stakingMechanicsTitle: stakingMechanicsTitle,
@@ -540,11 +529,10 @@ export const ProjectsData = [
       description1: 'Platform for a&nbsp;Thriving Planet Regen Network aligns economics with ecology to&nbsp;drive regenerative land management. Regen Ledger is&nbsp;a&nbsp;public, proof of&nbsp;stake (PoS) blockchain developed with the Cosmos Software Development Kit (SDK) built for verification of&nbsp;claims, agreements &amp;&nbsp;data related to&nbsp;ecological state.',
       description2: 'Regen Ledger enables multiple registries to&nbsp;communicate and transact with each other producing a&nbsp;public ecological accounting system. Get involved with our community of&nbsp;developers.',
       stakingCommissionTitle: 'Staking Commission',
-      stakingCommissionValue: '10&nbsp;%',
+      stakingCommissionValue: '4&nbsp;%',
       totalStakeTitle: 'Our Total Stake:',
-      totalStakeValue: '206448',
+      totalStakeValue: '1856929',
       delegatorsTitle: 'Delegators:',
-      delegatorsValue: '484',
       basicInfoList: [
         {
           title: basicInfoProtocolCategoryTitile,
@@ -552,7 +540,7 @@ export const ProjectsData = [
         },
         {
           title: basicInfoStakingTypeTitile,
-          value: 'PoH'
+          value: 'PoS'
         },
         {
           title: basicInfoGovernanceTitile,
@@ -560,29 +548,29 @@ export const ProjectsData = [
         },
         {
           title: basicInfoValidatorAddressTitile,
-          value: '4dmBLJcchyfucSxkVmrymmsnVpZm3rBkp7kbF7qHTTYW',
+          value: 'regenvaloper163g6kygmh08mgp0kj4gkenl4hj6nsqzgmd9w86',
           isAddress: true
         }
       ],
       stakingTutorialTitle: stakingTutorialTitle,
-      stakingTutorialSubTitle: 'Your SOLs must be in a wallet or custodial account in order to use our staking services.',
+      stakingTutorialSubTitle: 'Your REGENs must be in a wallet or custodial account in order to use our staking services.',
       articleLinks: [
         {
           articleTitle: introductoryArticleTitle,
-          postTitle: 'INTRODUCTION TO SOLANA',
+          postTitle: 'Regen Network — blockchain network of ecological knowledge',
           siteLink: mediumSiteLink,
           siteText: mediumSiteLabel,
-          sourceLink: 'https://medium.com/stake-service/introduction-to-solana-f35e23a25a61',
+          sourceLink: 'https://medium.com/stake-service/regen-network-blockchain-network-of-ecological-knowledge-573db3ac7880',
           sourceText: sourceButtonLabel,
           img: IntroImg
         },
         {
           articleTitle: howToStakeArticleTitle,
-          articleSubtitle: 'via Solflare Wallet',
-          postTitle: 'How to stake Solana tokens',
+          articleSubtitle: 'via Keplr wallet',
+          postTitle: 'Staking Regen with Keplr.',
           siteLink: mediumSiteLink,
           siteText: mediumSiteLabel,
-          sourceLink: 'https://medium.com/stake-service/how-to-stake-solana-tokens-7a6542fe4ec8',
+          sourceLink: 'https://medium.com/stake-service/staking-regen-with-keplr-43b5d630fb16',
           sourceText: sourceButtonLabel,
           img: StakeImg
         }

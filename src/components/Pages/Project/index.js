@@ -59,7 +59,7 @@ const Project = () => {
       <div className={classes}>
         <div className="project-page__header">
           <div className="header__description-side">
-            <a href={coinInfo?.homepage} target="_blank" rel="noreferrer">
+            <a href={projectData.homepage ? projectData.homepage : coinInfo?.homepage} target="_blank" rel="noreferrer">
               <img src={coinsData.img} alt={coinsData.coinName}/>
             </a>
             <div className="header__text-block">
@@ -91,7 +91,7 @@ const Project = () => {
               <div className="top-info-block__item">
                 <span className="top-info-block__active-text"
                   dangerouslySetInnerHTML={{
-                    __html: coinsData.percent
+                    __html: coinsData.percent ? coinsData.percent : '- %'
                   }}
                 />
                 <span className="top-info-block__text">{coinsData.rewardText}</span>
@@ -172,15 +172,16 @@ const Project = () => {
             }
           </div>
         </div>
-        <div className="project-page__calculator project-page-section-padding">
-          <SectionTitles
-            title={`${coinsData.coinName} ${projectData.rewardsCalculatorTitle}`}
-            classNameTitle="calculator__title"
-            subtitle={`${projectData.rewardsCalculatorSubTitle} ${coinsData.coinName.toLowerCase()}?`}
-            classNameSubtitle="calculator__subtitle"
-          />
-          <Calculator projectId={projectId}/>
-        </div>
+        {coinsData.price &&
+          <div className="project-page__calculator project-page-section-padding">
+            <SectionTitles
+              title={`${coinsData.coinName} ${projectData.rewardsCalculatorTitle}`}
+              classNameTitle="calculator__title"
+              subtitle={`${projectData.rewardsCalculatorSubTitle} ${coinsData.coinName.toLowerCase()}?`}
+              classNameSubtitle="calculator__subtitle"
+            />
+            <Calculator projectId={projectId}/>
+          </div>}
       </div>
     </div>
   );

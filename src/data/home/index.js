@@ -103,26 +103,26 @@ export const PRODUCT_CARDS_ARRAY = [
     id: 'centrifuge',
     percent: '',
     isSoon: false,
-    rewardText: 'Nominal Reward APY',
+    rewardText: 'Nominal Reward (soon)',
     exploreText: 'Explore',
-    percentNumber: 1.2
+    percentNumber: 1
   },
   {
     img: CosmicHorizonIcon,
     percent: '',
     id: 'cosmic-horizon',
     isSoon: true,
-    rewardText: '',
+    rewardText: 'Nominal Reward (soon)',
     exploreText: 'Explore',
     coin: 'coho',
     coinName: 'Cosmic Horizon',
-    percentNumber: 1.3
+    percentNumber: 1
   },
   {
     id: 'dock',
     percent: '',
     isSoon: false,
-    rewardText: 'Nominal Reward APY',
+    rewardText: 'Nominal Reward (soon)',
     exploreText: 'Explore',
     percentNumber: 1
   }
