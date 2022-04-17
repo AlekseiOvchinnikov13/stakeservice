@@ -13,7 +13,7 @@ import {
   SUB_TITLE,
   TITLE,
   WHAT_WE_DO,
-  WHAT_WE_DO_TEXT,
+  WHAT_WE_DO_TEXT
 } from '../../../data/home';
 import TopBg from './images/top-bg.svg';
 import FooterBg from './images/footer-bg.svg';
@@ -21,19 +21,19 @@ import WhatWeDoBg from './images/what-we-do-bg.svg';
 import Fade from 'react-reveal/Fade';
 import ProjectViewCard from '../../ProjectViewCard';
 import Loader from '../../Loader';
-import {useContext, useEffect, useState} from 'react';
-import {CoinsContext} from '../../../context/CoinsContext';
-import {isMobile, sliceArrayByCount} from '../../../helpers/helpers';
+import { useContext, useEffect, useState } from 'react';
+import { CoinsContext } from '../../../context/CoinsContext';
+import { isMobile, sliceArrayByCount } from '../../../helpers/helpers';
 import ReadMore from '../../ReadMore';
-import {BLOG, BLOG_SUBTITLE, READ_MORE_TEXT_SEE_ALL_CLOSE, READ_MORE_TEXT_SEE_ALL_OPEN} from '../../../data/common';
+import { BLOG, BLOG_SUBTITLE, READ_MORE_TEXT_SEE_ALL_CLOSE, READ_MORE_TEXT_SEE_ALL_OPEN } from '../../../data/common';
 import SubTitleBlock from '../../SubTitleBlock';
 import TextStroke from '../../TextStroke';
 import Calculator from '../../Calculator';
-import {CALCULATOR_STROKE_TEXT, CALCULATOR_TITLE} from '../../../data/calculator';
+import { CALCULATOR_STROKE_TEXT, CALCULATOR_TITLE } from '../../../data/calculator';
 import Contacts from '../../Contacts';
 import ContactForm from '../../ContactForm';
 import LinkArrow from '../../LinkArrow';
-import {PostsContext} from '../../../context/postsContext';
+import { PostsContext } from '../../../context/postsContext';
 import BlogCard from '../../BlogCard';
 import './style/style.scss';
 
@@ -139,9 +139,14 @@ const Home = () => {
           }
         </div>
         <div className="blog-cards">
-          {posts && sliceArrayByCount(countPosts, posts).map(card =>
-            <BlogCard data={card} key={card.title}/>
-          )}
+          {posts?.length > 0
+            ? sliceArrayByCount(countPosts, posts)
+              .map(card => {
+                console.log('card', card);
+                return <BlogCard data={card} key={card.guid}/>;
+              })
+            : <Loader/>
+          }
         </div>
       </section>
       <section id="calculator" className="container">

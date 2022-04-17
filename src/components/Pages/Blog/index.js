@@ -1,12 +1,13 @@
 import TextStroke from '../../TextStroke';
-import {BLOG, BLOG_SUBTITLE} from '../../../data/common';
+import { BLOG, BLOG_SUBTITLE } from '../../../data/common';
 import topBg from './images/blog-top-bg.svg';
 import SubTitleBlock from '../../SubTitleBlock';
 import Categories from '../../Categories';
-import {useContext, useEffect, useState} from 'react';
+import { useContext, useEffect, useState } from 'react';
 import BlogCard from '../../BlogCard';
-import {PostsContext} from '../../../context/postsContext';
+import { PostsContext } from '../../../context/postsContext';
 import classNames from 'classnames';
+import { getAllCategories } from '../../../helpers/helpers';
 import './style/style.scss';
 
 const Blog = () => {
@@ -16,7 +17,7 @@ const Blog = () => {
 
   const classesWrapperCard = classNames(
     'blog-page__content',
-    {'blog-page__content-secondary': activePosts?.length <= 4}
+    { 'blog-page__content-secondary': activePosts?.length <= 4 }
   );
 
   const addCategory = cat => {
@@ -48,20 +49,20 @@ const Blog = () => {
 
   return (
     <div className="blog-page container">
-      <img src={topBg} alt="blog top background" className="blog-page__top-bg"/>
+      <img src={topBg} alt="blog top background" className="blog-page__top-bg" />
       <div className="blog-page__header">
         <div className="blog-page__header-left-wrapper">
-          <SubTitleBlock title={BLOG} isBlueStick/>
-          <Categories
+          <SubTitleBlock title={BLOG} isBlueStick />
+          {getAllCategories().length > 0 && <Categories
             addHandle={addCategory}
             delHandle={delCategory}
-          />
+          />}
         </div>
-        <TextStroke text={BLOG_SUBTITLE}/>
+        <TextStroke text={BLOG_SUBTITLE} />
       </div>
       <div className={classesWrapperCard}>
         {activePosts && activePosts.map(card =>
-          <BlogCard data={card} key={card.title}/>
+          <BlogCard data={card} key={card.title} />
         )}
       </div>
     </div>

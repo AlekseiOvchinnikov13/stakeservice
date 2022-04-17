@@ -1,11 +1,11 @@
 import axios from 'axios';
 
 export const getFeeds = () => {
-  const nameMedium = 'stake-service';
-  const url = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/${nameMedium}`;
-
-  return axios.get(url)
-    .then(res => res.data.items.reverse())
+  //const nameMedium = 'stake-service';
+  //const url = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/${nameMedium}`;
+  const urlAddition = 'https://api.rss2json.com/v1/api.json?rss_url=https://rss.app/feeds/58wFvJBIPryvOyHu.xml';
+  return axios.get(urlAddition)
+    .then(res => res.data.items)
     .catch(() => []);
 };
 
