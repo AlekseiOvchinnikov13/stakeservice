@@ -73,14 +73,14 @@ const Home = () => {
         <Fade left duration={2000}>
           <h1 className="top-content__title">{TITLE}</h1>
         </Fade>
-        <img src={TopBg} alt="top background" className="top-content__top-background"/>
+        <img src={TopBg} alt="top background" className="top-content__top-background" />
       </section>
       <section id="project" className="container">
         <div className="project-cards-wrapper">
           {coinsArray.length > 0
             ? coinsArray.map(card =>
-              <ProjectViewCard key={card.coin} card={card}/>)
-            : <Loader/>}
+              <ProjectViewCard key={card.coin} card={card} />)
+            : <Loader />}
         </div>
         {isMobile() &&
           <ReadMore
@@ -99,11 +99,11 @@ const Home = () => {
             isBlueStick
           />
           {!isMobile() &&
-            <TextStroke text={ABOUT_US} className="right-center"/>
+            <TextStroke text={ABOUT_US} className="right-center" />
           }
         </div>
         <div className="reliable-validator">
-          <img src={WhatWeDoBg} alt="what we do background" className="reliable-validator__background"/>
+          <img src={WhatWeDoBg} alt="what we do background" className="reliable-validator__background" />
           <TextStroke
             text={RELIABLE_VALIDATOR}
             className="center"
@@ -123,7 +123,7 @@ const Home = () => {
             isBlueStick
           />
           {!isMobile() &&
-            <TextStroke text={WHAT_WE_DO} className="right-up"/>
+            <TextStroke text={WHAT_WE_DO} className="right-up" />
           }
         </div>
       </section>
@@ -135,17 +135,14 @@ const Home = () => {
             isBlueStick
           />
           {!isMobile() &&
-            <TextStroke text={BLOG_SUBTITLE} className="right-center"/>
+            <TextStroke text={BLOG_SUBTITLE} className="right-center" />
           }
         </div>
         <div className="blog-cards">
           {posts?.length > 0
-            ? sliceArrayByCount(countPosts, posts)
-              .map(card => {
-                console.log('card', card);
-                return <BlogCard data={card} key={card.guid}/>;
-              })
-            : <Loader/>
+            ? sliceArrayByCount(countPosts, posts).map(card =>
+              <BlogCard data={card} key={card.title} />)
+            : <Loader />
           }
         </div>
       </section>
@@ -156,16 +153,16 @@ const Home = () => {
             isBlueStick
           />
           {!isMobile() &&
-            <TextStroke text={CALCULATOR_STROKE_TEXT} className="right-bottom"/>
+            <TextStroke text={CALCULATOR_STROKE_TEXT} className="right-bottom" />
           }
         </div>
         {coins.length > 0
-          ? <Calculator/>
-          : <Loader/>
+          ? <Calculator />
+          : <Loader />
         }
       </section>
       <section id="contact" className="container">
-        {!isMobile() && <img src={FooterBg} alt="footer background" className="contact-footer__background"/>}
+        {!isMobile() && <img src={FooterBg} alt="footer background" className="contact-footer__background" />}
         <div className="contact-header">
           <SubTitleBlock
             label={CONTACT}
@@ -181,7 +178,7 @@ const Home = () => {
           }
         </div>
         <div className="contact-form">
-          <ContactForm/>
+          <ContactForm />
         </div>
         <div className="contact-footer">
           <SubTitleBlock
