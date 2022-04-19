@@ -22,6 +22,7 @@
 
     .text-stroke {
       text-align: right;
+      position: relative;
     }
   }
 
@@ -51,6 +52,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    position: relative;
   }
 
   &__content-secondary {
