@@ -367,9 +367,9 @@ export const ProjectsData = [
       description1: 'Centrifuge is&nbsp;a&nbsp;decentralized asset financing protocol. It&nbsp;connects decentralized finance (DeFi) with real-world assets (RWA) while trying to&nbsp;lower the cost of&nbsp;capital for small and mid-size enterprises (SMEs) and provide investors with a&nbsp;stable source of&nbsp;income. The main goal of&nbsp;the project is&nbsp;to&nbsp;generate profits that are not tied to&nbsp;volatile crypto assets; the developers are pursuing the task of&nbsp;transferring real monetary value from fiat to&nbsp;cryptocurrencies.',
       description2: 'Companies are using Centrifuge to&nbsp;access the liquidity that DeFi has to&nbsp;offer. They can tokenize real assets and use these tokens as&nbsp;collateral to&nbsp;access financing through Tinlake, a&nbsp;decentralized application (DApp) lending protocol. The Centrifuge blockchain is&nbsp;built on&nbsp;Polkadot (DOT) for speed and low fees, while its financial DApp Tinlake is&nbsp;built to&nbsp;access Ethereum (ETH) liquidity.',
       stakingCommissionTitle: stakingCommissionTitle,
-      stakingCommissionValue: '-&nbsp;%',
+      stakingCommissionValue: '8&nbsp;%',
       totalStakeTitle: totalStakeTitle,
-      totalStakeValue: '-',
+      totalStakeValue: '14985.44',
       delegatorsTitle: delegatorsTitle,
       delegatorsValue: '-',
       basicInfoList: [
@@ -379,15 +379,15 @@ export const ProjectsData = [
         },
         {
           title: basicInfoStakingTypeTitile,
-          value: 'PoS'
+          value: 'NPoS'
         },
         {
           title: basicInfoGovernanceTitile,
-          value: '-'
+          value: ''
         },
         {
           title: basicInfoValidatorAddressTitile,
-          value: '-',
+          value: '4dfMuh3JVgrKgeWyzbcys2y5H3BJzzTySUmgUkgmuQumDZAK',
           isAddress: true
         }
       ],
@@ -584,4 +584,62 @@ export const ProjectsData = [
       rewardsCalculatorSubTitle: rewardsCalculatorSubTitle,
     }
   },
+  /*{
+    projectId: 'xx-network',
+    data: {
+      description1: 'The xx&nbsp;network is&nbsp;a&nbsp;&laquo;full-stack&raquo; platform which combines a&nbsp;native scalable, quantum-ready layer 1&nbsp;blockchain with the most private communications network in&nbsp;the world.',
+      description2: 'Invented by&nbsp;cryptographer David Chaum, the godfather of&nbsp;digital currency and privacy, the xx&nbsp;network&rsquo;s cMix communications layer provides complete metadata protection to&nbsp;all network communications. Using the xxDK, any application or&nbsp;blockchain platform can route their traffic through the xx&nbsp;network and provide quantum-secure, end-to-end encryption to&nbsp;their own transactions.',
+      stakingCommissionTitle: stakingCommissionTitle,
+      stakingCommissionValue: '10&nbsp;%',
+      totalStakeTitle: totalStakeTitle,
+      totalStakeValue: '',
+      delegatorsTitle: delegatorsTitle,
+      delegatorsValue: '',
+      basicInfoList: [
+        {
+          title: basicInfoProtocolCategoryTitile,
+          value: 'Layer 1'
+        },
+        {
+          title: basicInfoStakingTypeTitile,
+          value: ''
+        },
+        {
+          title: basicInfoGovernanceTitile,
+          value: ''
+        },
+        {
+          title: basicInfoValidatorAddressTitile,
+          value: '',
+          isAddress: true
+        }
+      ],
+      stakingTutorialTitle: stakingTutorialTitle,
+      stakingTutorialSubTitle: 'Your SOLs must be in a wallet or custodial account in order to use our staking services.',
+      articleLinks: [
+        {
+          articleTitle: introductoryArticleTitle,
+          postTitle: 'INTRODUCTION TO SOLANA',
+          siteLink: mediumSiteLink,
+          siteText: mediumSiteLabel,
+          sourceLink: 'https://medium.com/stake-service/introduction-to-solana-f35e23a25a61',
+          sourceText: sourceButtonLabel,
+          img: IntroImg
+        },
+        {
+          articleTitle:  howToStakeArticleTitle,
+          articleSubtitle: 'via Solflare Wallet',
+          postTitle: 'How to stake Solana tokens',
+          siteLink: mediumSiteLink,
+          siteText: mediumSiteLabel,
+          sourceLink: 'https://medium.com/stake-service/how-to-stake-solana-tokens-7a6542fe4ec8',
+          sourceText: sourceButtonLabel,
+          img: StakeImg
+        }
+      ],
+      stakingMechanicsTitle: stakingMechanicsTitle,
+      rewardsCalculatorTitle: rewardsCalculatorTitle,
+      rewardsCalculatorSubTitle: rewardsCalculatorSubTitle,
+    }
+  }*/
 ];
